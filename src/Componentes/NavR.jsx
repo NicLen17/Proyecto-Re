@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, Container, Nav, Navbar } from 'react-bootstrap'
+import { Button, Container, Nav, Navbar } from 'react-bootstrap'
 import { Link, Outlet } from 'react-router-dom'
 
 export default function NavR() {
