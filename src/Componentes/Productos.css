@@ -1,0 +1,20 @@
+.Productos-inicio {
+    margin-top: 80px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    justify-content: space-around !important;
+}
+
+.Filtros {
+    background-color: black;
+    width: 400px;
+    height: 700px;
+}
+
+.Todos-productos {
+    width: 1200px;
+    height: 100vh;
+    background-color: black;
+}
+

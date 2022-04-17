@@ -1,0 +1,65 @@
+.Inicio {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.Titulo-inicio {
+    border-bottom: 1px solid black;
+    text-align: left;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.Inicio-swip {
+    -webkit-box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+}
+
+.Carro-Inicio {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.CarroI-Img {
+    height: 250px;
+    width: 300px;
+    transition: 0.2s;
+}
+
+.CarroI-Img:hover {
+    transform: scale(1.2);
+}
+
+.Inicio-Cards {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    justify-content: space-around !important;
+    text-decoration: none !important;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.CardI-style {
+    margin-top: 20px;
+    text-align: left;
+    width: 350px;
+    height: 370px;
+    border: 1px solid rgba(0, 0, 0, 0.24) !important;
+    -webkit-box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+    transition: 0.2s;
+}
+
+.CardI-style:hover {
+    transform: scale(1.1);
+}
+
+.CardI-img {
+    border: 1px rgba(0, 0, 0, 0.336) solid;
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+}
