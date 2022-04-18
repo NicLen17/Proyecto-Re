@@ -16,6 +16,7 @@ export default function Inicio() {
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={10}
+                    grabCursor={true}
                     loop={true}
                     pagination={{
                         clickable: false,
@@ -39,6 +40,7 @@ export default function Inicio() {
         slidesPerView={6}
         spaceBetween={0}
         loop={true}
+        grabCursor={true}
         pagination={{
           clickable: true,
         }}

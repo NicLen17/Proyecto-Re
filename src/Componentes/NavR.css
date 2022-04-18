@@ -1,5 +1,5 @@
 .Nav-entera {
-    margin-bottom: 200px !important;
+    margin-bottom: 150px !important;
 }
 
 .Nav-bar {
@@ -12,16 +12,21 @@
 }
 
 .Logo-nav {
-
+    margin-left: 15px;
 }
 
 .Logo-nav-img {
+    border-radius: 15px !important;
     width: 35px;
     height: 35px;
 }
 
 .Nav-item {
+    transition: 0.2s !important;
+}
 
+.Nav-item:hover {
+    transform: translateY(-3px);
 }
 
 .Input-Nav {

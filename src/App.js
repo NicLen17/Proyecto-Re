@@ -1,6 +1,5 @@
 import './App.css';
 import Inicio from './Componentes/Inicio'
-import Carro from './Componentes/Carro'
 import NavR from './Componentes/NavR'
 import Footer from './Componentes/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';

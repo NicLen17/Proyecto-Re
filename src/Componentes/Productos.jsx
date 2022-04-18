@@ -1,6 +1,7 @@
 import './Productos.css'
 import React from 'react'
 import { Button, Card, Dropdown, Form } from 'react-bootstrap'
+import CardProductos from './Llamados/CardProductos'
 
 export default function Productos() {
   return (
@@ -28,7 +29,7 @@ export default function Productos() {
           </div>
         </div>
         <div className='Todos-productos'>
-
+          {/* <CardProductos /> */}
         </div>
       </div>
     </div>
