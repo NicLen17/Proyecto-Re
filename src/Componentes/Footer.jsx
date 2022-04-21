@@ -10,23 +10,23 @@ export default function Footer() {
 
                 <div className="footer-left">
 
-                    <h3><img style={{ width: "75px", height: "75px", borderRadius: "35px" }} src={Logo} alt="" />Zeta Ross</h3>
+                    <h3><img style={{ width: "75px", height: "75px", borderRadius: "35px", marginRight: "10px" }} src={Logo} alt="" />Zeta Ross</h3>
 
                     <p className="footer-links">
-                        <a className="mt-2 " href="#inicio">Item 1</a>
+                        <a className="mt-2 items-footer" href="#inicio">Inicio</a>
                         <br />
-                        <a className="mt-2" href="#encuesta" blog>Item 2</a>
+                        <a className="mt-2 items-footer" href="#encuesta" blog>Productos</a>
                         <br />
-                        <a className="mt-2" href="#higene">Item 3</a>
+                        <a className="mt-2 items-footer" href="#higene">Contacto</a>
                         <br />
-                        <a className="mt-2" href="#control">Item 4</a>
+                        <a className="mt-2 items-footer" href="#control">Registro</a>
                     </p>
 
                     <div className="footer-icons">
 
-                        <a href=""><img style={{ width: "50px", height: "50px" }} src="https://icongr.am/fontawesome/facebook-official.svg?size=128&color=355bd0" alt="" /></a>
-                        <a href="https://www.instagram.com/zeta.ross.3d/"><img style={{ width: "50px", height: "50px" }} src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
-                        <a href="https://api.whatsapp.com/send?phone=543816072290"><img style={{ width: "50px", height: "50px" }} src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a> 
+                        <a href="https://www.facebook.com/amir.nazar.5"><img className='Redes-footer' src="https://icongr.am/fontawesome/facebook-official.svg?size=128&color=355bd0" alt="" /></a>
+                        <a href="https://www.instagram.com/zeta.ross.3d/"><img className='Redes-footer' src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
+                        <a href="https://api.whatsapp.com/send?phone=543816072290"><img className='Redes-footer' src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a> 
 
                     </div>
 

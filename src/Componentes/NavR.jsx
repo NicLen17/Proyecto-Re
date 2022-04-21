@@ -20,40 +20,34 @@ export default function NavR({
                             <Nav className="me-auto">
                                 <Nav.Link className='Nav-item' as={Link} to="/" >Inicio</Nav.Link>
                                 {userName && userCategory && (
-                                    <Nav.Link as={Link} to="/admin"className='Nav-item'>
+                                    <Nav.Link as={Link} to="/admin" className='Nav-item'>
                                         Administracion
                                     </Nav.Link>)}
                                 <Nav.Link className='Nav-item' as={Link} to="/productos" >Productos</Nav.Link>
                                 <Nav.Link className='Nav-item' as={Link} to="/contacto" >Contacto</Nav.Link>
-                                <Nav.Link className='Nav-item' as={Link} to="/register" >Registro</Nav.Link>
                                 <div className="iconosnav">
-                                    {userName && (
-                                        <h2 style={{ width: "150px", maxWidth: "100%" }} className='Nav-item'>
-                                            {userName}
-                                        </h2>
-                                    )}
                                     {/* muestra el nombre del usuario, con la codicion que si no está logueado no muestre nada */}
-                                    {userName && (
-                                        <Button className='Nav-item' onClick={logout}>
-                                            Cerrar Sesión
-                                        </Button>
-                                    )}
                                     {!userName && (
                                         <Nav.Link as={Link} to="/login" className='Nav-item'>
                                             Login{" "}
                                         </Nav.Link>
                                     )}
-                                    {userName && (
-                                        <Nav.Link href="perfil" className='Nav-item'>
-                                            <img
-                                                src="https://icongr.am/fontawesome/user.svg?size=35&color=currentColor"
-                                                alt="imagen"
-                                            />{" "}
-                                        </Nav.Link>
-                                    )}
                                 </div>
                             </Nav>
                             <input className='Input-Nav' placeholder='Busqueda...' type="text" /><Button className='Boton-busqueda'><img style={{ height: "15px" }} src="https://icongr.am/octicons/search.svg?size=128&color=currentColor" alt="" /></Button>
+                            {userName && (
+                                <Button style={{color: "black"}} className='Boton-busqueda' onClick={logout}>
+                                    Cerrar Sesión
+                                </Button>
+                            )}
+                            {userName && (
+                                <Nav.Link href="perfil" className='Nav-item'>
+                                    <img
+                                        src="https://icongr.am/fontawesome/user.svg?size=35&color=ffffff"
+                                        alt="imagen"
+                                    />{" "}
+                                </Nav.Link>
+                            )}
                         </Navbar.Collapse>
                     </div>
                 </Navbar>

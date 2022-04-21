@@ -42,15 +42,14 @@ export default function Login({ setUser, setToken }) {
     <div data-aos="fade-up" className="container loginForm">
       <Form
         onSubmit={handleSubmit}
-        className="card mx-auto p-4 mt-5 logincontent "
-        style={{ width: "400px" }}
+        className="card mx-auto p-4 mt-5 login-form"
       >
         {alert && <Alert variant="danger">{alert}</Alert>}
-        <h1>Ingresa!</h1>
+        <h1 className="Titulo-login-principal">Ingresa!</h1>
         <Form.Group controlId="formBasicEmail" className="forminputconteiner">
-          <Form.Label>Ingrese su Email</Form.Label>
+          <Form.Label className="Form-titulos">Ingrese su Email</Form.Label>
           <Form.Control
-            className="loginlabel"
+            className="Input-login"
             name="email"
             onChange={handleChange}
             type="email"
@@ -60,9 +59,9 @@ export default function Login({ setUser, setToken }) {
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Ingrese su Password</Form.Label>
+          <Form.Label className="Form-titulos">Ingrese su Password</Form.Label>
           <Form.Control
-            className="loginlabel"
+            className="Input-login"
             name="password"
             onChange={handleChange}
             type="password"
@@ -70,7 +69,7 @@ export default function Login({ setUser, setToken }) {
             required
           />
         </Form.Group>
-        <Button className="loginbut" type="submit">
+        <Button className="Contacto-boton" variant="msgbut" type="submit">
           Enviar
         </Button>
         <Row>

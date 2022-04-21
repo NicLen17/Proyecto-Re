@@ -62,13 +62,13 @@ export default function Register({ setToken }) {
     }, []);
 
     return (
-        <Container data-aos="fade-up" className="registerform">
+        <Container data-aos="fade-up">
             <Row>
                 <Col xs={12} sm={8} md={6} className="mx-auto my-5">
                     {alert && <Alert variant="danger">{alert}</Alert>}
-                    <Card className="border registercontent">
+                    <Card className="border Register-form">
                         <Card.Header className="text-white">
-                            <h4 className="mt-1">Crea tu cuenta</h4>
+                            <h4 className="Titulo-register-principal">Crea tu cuenta</h4>
                         </Card.Header>
                         <Card.Body>
                             <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -76,38 +76,21 @@ export default function Register({ setToken }) {
                                     className="reginputconteiner"
                                     controlId="validationCustom01"
                                 >
-                                    <Form.Label>Nombre y Apellido</Form.Label>
+                                    <Form.Label className="Form-titulos">Nombre y Apellido</Form.Label>
                                     <Form.Control
                                         name="nombre"
                                         onChange={(e) => handleChange(e)}
                                         required
                                         type="text"
                                         placeholder="Nombre y Apellido"
-                                        className="registerlabel text-uppercase"
+                                        className="Input-register  text-uppercase"
                                         maxLength="25"
                                         minLength="6"
                                     />
                                     <Form.Control.Feedback>Ok!</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group
-                                    className="reginputconteiner"
-                                    controlId="validationCustom01"
-                                >
-                                    <Form.Label>Nombre de usuario</Form.Label>
-                                    <Form.Control
-                                        name="usuario"
-                                        onChange={(e) => handleChange(e)}
-                                        required
-                                        type="text"
-                                        placeholder="Nombre y Apellido"
-                                        className="registerlabel text-uppercase"
-                                        maxLength="8"
-                                        minLength="3"
-                                    />
-                                    <Form.Control.Feedback>Ok!</Form.Control.Feedback>
-                                </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>Celular</Form.Label>
+                                    <Form.Label className="Form-titulos">Celular</Form.Label>
                                     <Form.Control
                                         name="celular"
                                         required
@@ -117,7 +100,7 @@ export default function Register({ setToken }) {
                                         maxLength="15"
                                         pattern="[0-9,.]+"
                                         placeholder="Celular"
-                                        className="registerlabel"
+                                        className="Input-register "
                                     />
                                     <Form.Control.Feedback>Ok!</Form.Control.Feedback>
                                 </Form.Group>
@@ -125,15 +108,15 @@ export default function Register({ setToken }) {
                                     className="reginputconteiner"
                                     controlId="validationCustom02"
                                 >
-                                    <Form.Label>Email</Form.Label>
+                                    <Form.Label className="Form-titulos">Email</Form.Label>
                                     <Form.Control
                                         name="email"
                                         onChange={(e) => handleChange(e)}
                                         required
-                                        type="text"
+                                        type="email"
                                         placeholder="Email"
                                         maxLength="40"
-                                        className="registerlabel text-uppercase"
+                                        className="Input-register  text-uppercase"
                                     />
                                     <Form.Control.Feedback>Ok!</Form.Control.Feedback>
                                 </Form.Group>
@@ -141,7 +124,7 @@ export default function Register({ setToken }) {
                                     className="reginputconteiner"
                                     controlId="validationCustomUsername"
                                 >
-                                    <Form.Label>Password</Form.Label>
+                                    <Form.Label className="Form-titulos">Password</Form.Label>
                                     <InputGroup hasValidation>
                                         <Form.Control
                                             minLength="6"
@@ -150,7 +133,7 @@ export default function Register({ setToken }) {
                                             type="password"
                                             placeholder="****"
                                             aria-describedby="inputGroupPrepend"
-                                            className="registerlabel"
+                                            className="Input-register"
                                             required
                                         />
                                         <Form.Control.Feedback type="invalid">
@@ -162,7 +145,7 @@ export default function Register({ setToken }) {
                                     className="reginputconteiner"
                                     controlId="validationCustomUsername"
                                 >
-                                    <Form.Label>Confirmar Password</Form.Label>
+                                    <Form.Label className="Form-titulos">Confirmar Password</Form.Label>
                                     <InputGroup hasValidation>
                                         <Form.Control
                                             minLength="6"
@@ -171,7 +154,7 @@ export default function Register({ setToken }) {
                                             type="password"
                                             placeholder="****"
                                             aria-describedby="inputGroupPrepend"
-                                            className="registerlabel"
+                                            className="Input-register"
                                             required
                                         />
                                         <Form.Control.Feedback type="invalid">
@@ -181,7 +164,8 @@ export default function Register({ setToken }) {
                                 </Form.Group>
                                 <Row>
                                     <Button
-                                        className="registerbut mt-3"
+                                        style={{ margin: "auto"}}
+                                        className="Contacto-boton"
                                         variant="loginbut"
                                         type="submit"
                                     >

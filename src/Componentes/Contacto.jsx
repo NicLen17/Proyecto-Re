@@ -5,7 +5,7 @@ import './Contacto.css'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import axios from "axios";
-
+import Logo from '../img/01.jpg'
 
 
 SwiperCore.use([Pagination]);
@@ -40,7 +40,7 @@ export default function Contacto() {
     }
     setTimeout(() => {
       setAlert("");
-  }, 5000);
+    }, 5000);
   };
   const handleChange = (e) => {
     setAlert("");
@@ -50,104 +50,78 @@ export default function Contacto() {
   }
 
   return (
-    <div data-aos="fade-down-right">
-      <div className="body" style={{ marginBottom: "160px", maxWidth: "100%" }}>
-        <div className="p-3 contacto" style={{ textAlign: "center", marginTop: "45px" }}>
-          <h1>CONTACTA CON NOSOTROS</h1>
-          <h3>Podes enviarnos tu consulta</h3>
-          <p>
-            Completa el formulario con tu consulta y nuestros asesores responderan
-            dentro de las 48hs habiles. Tambien podes contactarnos mediante los
-            enlaces directos de nuestras redes sociales!
-          </p>
+    <div data-aos="fade-down" > 
+      <h1 className="Titulo-contacto-principal">Contacto</h1>
+    <div className="Contacto">
+      <div data-aos="fade-right" className="Contacto-form">
+        {alert && <Alert variant="danger">{alert}</Alert>}
+        <Form noValidate validated={validated} onSubmit={(e) => handleSubmit(e)}>
+          <Form.Group
+            style={{ marginTop: "15px" }}
+            controlId="exampleForm.ControlInput1"
+          >
+            <Form.Label className="Form-titulos">Nombre y Apellido</Form.Label>
+            <Form.Control className="Input-contacto" type="name" placeholder="Nombre y Apellido" required name="nombreyapellido" maxLength="50" onChange={(e) => handleChange(e)} />
+            <Form.Control.Feedback type="invalid">
+              Se requiere nombre y apellido!
+            </Form.Control.Feedback>
+            <Form.Control.Feedback>Recibido</Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group
+            style={{ marginTop: "15px" }}
+            controlId="exampleForm.ControlInput1"       >
+            <Form.Label className="Form-titulos">Correo electronico</Form.Label>
+            <Form.Control className="Input-contacto" type="email" placeholder="Correo@example.com" required maxLength="30" name="email" onChange={(e) => handleChange(e)} />
+            <Form.Control.Feedback type="invalid">
+              Se requiere correo Electronico!
+            </Form.Control.Feedback>
+            <Form.Control.Feedback>Recibido</Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group
+            style={{ marginTop: "15px" }}
+            controlId="exampleForm.ControlInput1"
+          >
+            <Form.Label className="Form-titulos">Telefono</Form.Label>
+            <Form.Control className="Input-contacto" maxLength="10" type="number" placeholder="codigo de area + numero sin 15" required max="999999999999" name="tel" onChange={(e) => handleChange(e)} />
+            <Form.Control.Feedback type="invalid">
+              Se requiere telefono valido!
+            </Form.Control.Feedback>
+            <Form.Control.Feedback>Recibido</Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group
+            style={{ marginTop: "15px" }}
+            controlId="exampleForm.ControlTextarea1"
+          >
+            <Form.Label className="Form-titulos">Mensaje</Form.Label>
+            <Form.Control className="Input-contacto" minLength="20" maxLength="300" as="textarea" placeholder="Mensaje" required rows={3} name="mensaje" onChange={(e) => handleChange(e)} />
+            <Form.Control.Feedback type="invalid">
+              Se requiere mensaje y un minimo de 20 caracteres!
+            </Form.Control.Feedback>
+            <Form.Control.Feedback>Recibido</Form.Control.Feedback>
+          </Form.Group>
+          <Button className="Contacto-boton" variant="msgbut" type="submit"> Enviar </Button>
+          {alertSuccess && <Alert variant="dark">{alertSuccess}</Alert>}
+        </Form>
+      </div>
+      <div data-Aos="fade-left" className="Otros-contactos">
+        <img className="Logo-contacto" src={Logo} alt="" />
+        <div className="Titulo-otrasR">
+        <h2 >
+          Tambien puedes contactarme por mis redes sociales!
+        </h2>
         </div>
-        <div className="formulario" style={{ maxWidth: "100%" }}>
-          <div className="row d-flex flex-wrap" style={{ maxWidth: "100%" }}>
-            <div className="d-flex flex-wrap col" style={{ maxWidth: "100%" }}>
-              <div
-                className="p-5 mx-auto"
-                style={{ textAlign: "left", width: "700px" }}
-              >{alert && <Alert variant="danger">{alert}</Alert>}
-                {alertSuccess && <Alert variant="success">{alertSuccess}</Alert>}
-                <Form noValidate validated={validated} onSubmit={(e) => handleSubmit(e)}>
-
-                  <Form.Group
-                    style={{ marginTop: "15px" }}
-                    controlId="exampleForm.ControlInput1"
-                  >
-                    <Form.Label>Nombre y Apellido</Form.Label>
-                    <Form.Control className="labelform" type="name" placeholder="Nombre y Apellido" required name="nombreyapellido"  maxLength="50" onChange={(e) => handleChange(e)} />
-                    <Form.Control.Feedback type="invalid">
-                      Se requiere nombre y apellido!
-                    </Form.Control.Feedback>
-                    <Form.Control.Feedback>Recibido</Form.Control.Feedback>
-                  </Form.Group>
-                  <Form.Group
-                    style={{ marginTop: "15px" }}
-                    controlId="exampleForm.ControlInput1"       >
-                    <Form.Label>Correo electronico</Form.Label>
-                    <Form.Control className="labelform" type="email" placeholder="Correo@example.com" required maxLength="30" name="email" onChange={(e) => handleChange(e)} />
-                    <Form.Control.Feedback type="invalid">
-                      Se requiere correo Electronico!
-                    </Form.Control.Feedback>
-                    <Form.Control.Feedback>Recibido</Form.Control.Feedback>
-                  </Form.Group>
-                  <Form.Group
-                    style={{ marginTop: "15px" }}
-                    controlId="exampleForm.ControlInput1"
-                  >
-                    <Form.Label>Telefono</Form.Label>
-                    <Form.Control className="labelform" maxLength="10" type="number" placeholder="codigo de area + numero sin 15" required max="999999999999" name="tel" onChange={(e) => handleChange(e)} />
-                    <Form.Control.Feedback type="invalid">
-                      Se requiere telefono valido!
-                    </Form.Control.Feedback>
-                    <Form.Control.Feedback>Recibido</Form.Control.Feedback>
-                  </Form.Group>
-                  <Form.Group
-                    style={{ marginTop: "15px" }}
-                    controlId="exampleForm.ControlTextarea1"
-                  >
-                    <Form.Label>Mensaje</Form.Label>
-                    <Form.Control className="labelform" minLength="20" maxLength="300" as="textarea" placeholder="Mensaje" required rows={3} name="mensaje" onChange={(e) => handleChange(e)} />
-                    <Form.Control.Feedback type="invalid">
-                      Se requiere mensaje y un minimo de 20 caracteres!
-                    </Form.Control.Feedback>
-                    <Form.Control.Feedback>Recibido</Form.Control.Feedback>
-                  </Form.Group>
-                  <Button className="msgbut"
-                  variant="msgbut"
-                    type="submit"
-                    style={{ marginTop: "10px", width: "100%" }}
-                  >
-                    Enviar
-                    <img
-                      src="https://icongr.am/octicons/comment.svg?size=25&color=ffffff"
-                      className="mr-3"
-                      alt="imagen no disponible"
-                    />
-                  </Button>
-                </Form>
-                <br />
-                <p className="msgtext" style={{ fontSize: "12px", textAlign: "justify" }}>
-                  Phone Pixels te informa que los datos de caracter personal que
-                  proporciones rellenando este formulario seran tratados de manera
-                  confidencial. La finalidad de la recogida y tratamiento de los
-                  mismos es dar respuesta a solicitudes de contacto y envio de
-                  contenidos. La legitimación se realiza a través de tu
-                  consentimiento. Los datos que me facilites estarán ubicados en los
-                  servidores de nuestro proveedor de hosting XXXX
-                  (https://www.phonepixels.com/) en EEUU. Podras acceder,
-                  rectificar, limitar y suprimir tus datos a través del email
-                  phonepixels@gmail.com asi como el derecho a presentar una
-                  reclamación ante una autoridad de control.
-                </p>
-                <hr />
-                
-              </div>
-            </div>
-          </div>
+        <div className="Conteiner-redeS">
+          <a href="https://www.facebook.com/amir.nazar.5"><img className='Redes-contacto' src="https://icongr.am/fontawesome/facebook-official.svg?size=128&color=355bd0" alt="" /></a>
+          <a href="https://www.instagram.com/zeta.ross.3d/"><img className='Redes-contacto' src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
+          <a href="https://api.whatsapp.com/send?phone=543816072290"><img className='Redes-contacto' src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a>
+        </div>
+        <div className="Conteiner-titulo-redeS">
+          <a className='Redes-titulos' href="https://www.facebook.com/amir.nazar.5">Amir Nazar</a>
+          <a className='Redes-titulos' href="https://www.instagram.com/zeta.ross.3d/">zeta.ross.3d</a>
+          <a className='Redes-titulos' href="https://api.whatsapp.com/send?phone=543816072290">3816072290</a>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -2,10 +2,15 @@
     margin-bottom: 150px !important;
 }
 
+@media only screen and (max-width: 675px) {
+    .Nav-entera {
+        margin-bottom: 0px !important;
+    }
+}
+
 .Nav-bar {
     background-color: black !important;
     font-size: 18px;
-    border-bottom: rgba(44, 5, 56, 0.411) solid 10px;
 }
 
 .Nav-cont {
@@ -33,13 +38,15 @@
 
 .Nav-item:hover {
     transform: translateY(-3px);
-    color: rgb(253, 173, 24) !important;
+    color: #fe8a39 !important;
 }
 
 .Input-Nav {
     height: 43px;
-    border-radius: 25px;
-    transition: 0.4s;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: #fe8a39 1px solid;
+    background-color: #fe8b3938;
 }
 
 .Boton-busqueda {
@@ -47,15 +54,14 @@
     border-radius: 50px !important;
     border: 1px black solid !important;
     height: 40px;
-    transition: 0.5s;
+    transition: 0.3s !important;
 }
 
 .Input-Nav:hover {
-    -webkit-box-shadow: 0px 8px 15px 10px rgba(253, 173, 24, 0.500) ;
-    box-shadow: 0px 1px 5px 5px rgba(253, 173, 24, 0.500) ;
+    background-color: #fe8b3963;
 }
 
 .Boton-busqueda:hover {
-    -webkit-box-shadow: 0px 8px 15px 10px rgba(253, 173, 24, 0.500) ;
-    box-shadow: 0px 1px 5px 5px rgba(253, 173, 24, 0.500) ;
+    -webkit-box-shadow: 0px 1px 12px 1px #fe8a39;
+    box-shadow: 0px 1px 12px 1px #fe8a39;
 }

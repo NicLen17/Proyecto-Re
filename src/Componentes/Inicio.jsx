@@ -1,5 +1,5 @@
 import './Inicio.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button, Card } from 'react-bootstrap'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -9,11 +9,18 @@ import './Carro.css'
 import sample from '../img/sample.jpeg'
 import Tarjeta from '../img/terjeta personal 1.jpg'
 import Cara from '../img/01.jpg'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 export default function Inicio() {
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+}, [])
+
   return (
     <div>
-      <div className="Carro-Cont">
+      <div data-aos="fade-up" className="Carro-Cont">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={10}
@@ -33,8 +40,8 @@ export default function Inicio() {
                 </Swiper>
             </div>
       <div className="Inicio">
-        <div className='Titulo-inicio'>
-          <h1>Productos populares</h1>
+        <div data-aos="fade-right" className='Titulo-inicio'>
+          <h1>Agregados recientemente</h1>
         </div>
         <div className='Carro-Inicio'>
         <Swiper
