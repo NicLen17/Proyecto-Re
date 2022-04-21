@@ -89,6 +89,23 @@ export default function Register({ setToken }) {
                                     />
                                     <Form.Control.Feedback>Ok!</Form.Control.Feedback>
                                 </Form.Group>
+                                <Form.Group
+                                    className="reginputconteiner"
+                                    controlId="validationCustom01"
+                                >
+                                    <Form.Label>Nombre de usuario</Form.Label>
+                                    <Form.Control
+                                        name="usuario"
+                                        onChange={(e) => handleChange(e)}
+                                        required
+                                        type="text"
+                                        placeholder="Nombre y Apellido"
+                                        className="registerlabel text-uppercase"
+                                        maxLength="8"
+                                        minLength="3"
+                                    />
+                                    <Form.Control.Feedback>Ok!</Form.Control.Feedback>
+                                </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Celular</Form.Label>
                                     <Form.Control

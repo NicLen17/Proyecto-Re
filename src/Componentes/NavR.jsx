@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button, Container, Nav, Navbar } from 'react-bootstrap'
+import { Button, Nav, Navbar } from 'react-bootstrap'
 import { Link, Outlet } from 'react-router-dom'
 import './NavR.css'
+import Logo from '../img/01.jpg'
 
 export default function NavR({
     userName,
@@ -15,11 +16,11 @@ export default function NavR({
                     <div className='Nav-cont'>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Navbar.Brand className='Logo-nav' as={Link} to="/"><img className='Logo-nav-img my-2' src="https://www.disaileco.com/wp-content/uploads/2013/12/1200x800.gif" alt="" /></Navbar.Brand>
+                            <Navbar.Brand className='Logo-nav' as={Link} to="/"><img className='Logo-nav-img my-2' src={Logo} alt="" /></Navbar.Brand>
                             <Nav className="me-auto">
                                 <Nav.Link className='Nav-item' as={Link} to="/" >Inicio</Nav.Link>
                                 {userName && userCategory && (
-                                    <Nav.Link as={Link} to="/admin" className="efecto-nav">
+                                    <Nav.Link as={Link} to="/admin"className='Nav-item'>
                                         Administracion
                                     </Nav.Link>)}
                                 <Nav.Link className='Nav-item' as={Link} to="/productos" >Productos</Nav.Link>
@@ -27,23 +28,23 @@ export default function NavR({
                                 <Nav.Link className='Nav-item' as={Link} to="/register" >Registro</Nav.Link>
                                 <div className="iconosnav">
                                     {userName && (
-                                        <h2 style={{ width: "150px", maxWidth: "100%" }} className="userbut">
+                                        <h2 style={{ width: "150px", maxWidth: "100%" }} className='Nav-item'>
                                             {userName}
                                         </h2>
                                     )}
                                     {/* muestra el nombre del usuario, con la codicion que si no está logueado no muestre nada */}
                                     {userName && (
-                                        <Button className="userbut2" variant="userbut2" onClick={logout}>
+                                        <Button className='Nav-item' onClick={logout}>
                                             Cerrar Sesión
                                         </Button>
                                     )}
                                     {!userName && (
-                                        <Nav.Link as={Link} to="/login" className="contenedor-icon">
+                                        <Nav.Link as={Link} to="/login" className='Nav-item'>
                                             Login{" "}
                                         </Nav.Link>
                                     )}
                                     {userName && (
-                                        <Nav.Link href="perfil" className="contenedor-icon">
+                                        <Nav.Link href="perfil" className='Nav-item'>
                                             <img
                                                 src="https://icongr.am/fontawesome/user.svg?size=35&color=currentColor"
                                                 alt="imagen"

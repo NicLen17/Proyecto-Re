@@ -7,7 +7,8 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import './Carro.css'
 import sample from '../img/sample.jpeg'
-
+import Tarjeta from '../img/terjeta personal 1.jpg'
+import Cara from '../img/01.jpg'
 
 export default function Inicio() {
   return (
@@ -25,10 +26,10 @@ export default function Inicio() {
                     modules={[Pagination, Navigation]}
                     className="mySwiper, Carro-Swip"
                 >
-                    <SwiperSlide><img className="CarroImg" src="https://www.disaileco.com/wp-content/uploads/2013/12/1200x800.gif" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className="CarroImg" src="https://www.disaileco.com/wp-content/uploads/2013/12/1200x800.gif" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className="CarroImg" src="https://www.disaileco.com/wp-content/uploads/2013/12/1200x800.gif" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className="CarroImg" src="https://www.disaileco.com/wp-content/uploads/2013/12/1200x800.gif" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="CarroImg" src={Tarjeta} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="CarroImg" src="https://i0.wp.com/www.latinamerica.tech/wp-content/uploads/2019/07/3d-printer-3311587_1280.png?fit=1280%2C720" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="CarroImg" src="http://tresdpro.com/wp-content/uploads/2018/09/impresoras-3d-metal.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="CarroImg" src="https://creatorium3d.com/wp-content/uploads/2021/03/impresora-3d-imprimiendo-filamentio-PLA.png" alt="" /></SwiperSlide>
                 </Swiper>
             </div>
       <div className="Inicio">
