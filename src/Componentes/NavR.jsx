@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Nav, Navbar } from 'react-bootstrap'
+import { Button, FormControl, InputGroup, Nav, Navbar } from 'react-bootstrap'
 import { Link, Outlet } from 'react-router-dom'
 import './NavR.css'
 import Logo from '../img/01.jpg'
@@ -34,9 +34,20 @@ export default function NavR({
                                     )}
                                 </div>
                             </Nav>
-                            <input className='Input-Nav' placeholder='Busqueda...' type="text" /><Button className='Boton-busqueda'><img style={{ height: "15px" }} src="https://icongr.am/octicons/search.svg?size=128&color=currentColor" alt="" /></Button>
+                            <InputGroup className="Input-Nav">
+                                <FormControl
+                                    className="Input-Nav"
+                                    placeholder='Busqueda...'
+                                    aria-label="Example text with button addon"
+                                    aria-describedby="basic-addon1"
+                                />
+                                <Button className='Boton-busqueda' variant="outline-secondary" id="button-addon1">
+                                    <img style={{ height: "15px" }} src="https://icongr.am/octicons/search.svg?size=128&color=currentColor" alt="" />
+                                </Button>
+                            </InputGroup>
+
                             {userName && (
-                                <Button style={{color: "black"}} className='Boton-busqueda' onClick={logout}>
+                                <Button style={{ color: "black" }} className='Boton-busqueda' onClick={logout}>
                                     Cerrar Sesión
                                 </Button>
                             )}

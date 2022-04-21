@@ -14,8 +14,15 @@
 }
 
 .Nav-cont {
-    margin: auto !important;
+    /* margin: auto; */
 }
+
+@media only screen and (max-width: 995px) {
+    .Nav-cont  {
+        margin: auto
+    }
+}
+
 
 .Logo-nav {
     margin-left: 15px;
@@ -23,8 +30,8 @@
 
 .Logo-nav-img {
     border-radius: 15px !important;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     transition: 0.3s;
 }
 
@@ -42,26 +49,21 @@
 }
 
 .Input-Nav {
-    height: 43px;
-    border-radius: 10px;
-    transition: 0.2s;
-    border: #fe8a39 1px solid;
-    background-color: #fe8b3938;
+    border-radius: 5px;
+    height: 43px !important;
+    transition: 0.2s !important;
+    border: #fe8a39 1px solid !important;
+    background-color: #fe8b3938 !important;
 }
 
 .Boton-busqueda {
     background-color: white !important;
-    border-radius: 50px !important;
     border: 1px black solid !important;
-    height: 40px;
+    height: 43px;
     transition: 0.3s !important;
+    border: #fe8a39 1px solid !important;
 }
 
 .Input-Nav:hover {
-    background-color: #fe8b3963;
-}
-
-.Boton-busqueda:hover {
-    -webkit-box-shadow: 0px 1px 12px 1px #fe8a39;
-    box-shadow: 0px 1px 12px 1px #fe8a39;
+    background-color: #fe8b3963 !important;
 }

@@ -1,4 +1,5 @@
 .Register-form {
+    margin-top: 50px;
     background: linear-gradient(-45deg, #f1683e, #3b0132, #230642);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -9,7 +10,7 @@
     display: flex;
     justify-content: center !important;
     border-radius: 25px;
-    border: #fe8a39 1px solid;
+    border: #fe8a39 solid 1px !important;
     text-align: start;
 }
 
@@ -22,13 +23,13 @@
 .Input-register {
     width: 100%;
     background-color: #fe8b3938;
-    border: #fe8a39 1px solid;
+    border: #fe8a39 1px solid !important;
     transition: 0.2s;
     color: white;
 }
 
 .Contacto-boton {
-    border: #fe8a39 solid 1px;
+    border: #fe8a39 solid 1px !important;
     margin-top: 30px !important;
     margin-bottom: 30px;
     width: 300px !important;

@@ -13,13 +13,13 @@ export default function Footer() {
                     <h3><img style={{ width: "75px", height: "75px", borderRadius: "35px", marginRight: "10px" }} src={Logo} alt="" />Zeta Ross</h3>
 
                     <p className="footer-links">
-                        <a className="mt-2 items-footer" href="#inicio">Inicio</a>
+                        <a className="mt-2 items-footer" href="/">Inicio</a>
                         <br />
-                        <a className="mt-2 items-footer" href="#encuesta" blog>Productos</a>
+                        <a className="mt-2 items-footer" href="/contacto" blog>Contacto</a>
                         <br />
-                        <a className="mt-2 items-footer" href="#higene">Contacto</a>
+                        <a className="mt-2 items-footer" href="/productos">Productos</a>
                         <br />
-                        <a className="mt-2 items-footer" href="#control">Registro</a>
+                        <a className="mt-2 items-footer" href="/login">Login</a>
                     </p>
 
                     <div className="footer-icons">

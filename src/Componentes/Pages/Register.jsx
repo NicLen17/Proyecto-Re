@@ -124,14 +124,14 @@ export default function Register({ setToken }) {
                                     className="reginputconteiner"
                                     controlId="validationCustomUsername"
                                 >
-                                    <Form.Label className="Form-titulos">Password</Form.Label>
+                                    <Form.Label className="Form-titulos">Contraseña</Form.Label>
                                     <InputGroup hasValidation>
                                         <Form.Control
                                             minLength="6"
                                             name="password"
                                             onChange={(e) => handleChange(e)}
                                             type="password"
-                                            placeholder="****"
+                                            placeholder="******"
                                             aria-describedby="inputGroupPrepend"
                                             className="Input-register"
                                             required
@@ -145,14 +145,14 @@ export default function Register({ setToken }) {
                                     className="reginputconteiner"
                                     controlId="validationCustomUsername"
                                 >
-                                    <Form.Label className="Form-titulos">Confirmar Password</Form.Label>
+                                    <Form.Label className="Form-titulos">Confirmar contraseña</Form.Label>
                                     <InputGroup hasValidation>
                                         <Form.Control
                                             minLength="6"
                                             name="password1"
                                             onChange={(e) => handleChange(e)}
                                             type="password"
-                                            placeholder="****"
+                                            placeholder="******"
                                             aria-describedby="inputGroupPrepend"
                                             className="Input-register"
                                             required
