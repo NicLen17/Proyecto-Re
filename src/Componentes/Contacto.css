@@ -3,6 +3,8 @@
     flex-wrap: wrap !important;
     justify-content: center;
     justify-content: space-evenly;
+    overflow: hidden !important;
+    margin: auto !important;
 }
 
 .Contacto-form {
@@ -20,6 +22,7 @@
     border-radius: 25px;
     border: #fe8a39 1px solid;
     text-align: start;
+    overflow: hidden !important;
 }
 
 @media (max-width: 1366px) {
@@ -58,6 +61,7 @@
         margin-top: 100px !important;
         margin-right: 10px !important;
         margin-left: 10px !important;
+        overflow: hidden !important;
     }
 }
 

@@ -51,7 +51,7 @@ export default function Contacto() {
 
   return (
     <div>
-      <div data-aos="fade-down">
+      <div style={{ overflow: "hidden" }} data-aos="fade-down">
         <h1 className="Titulo-contacto-principal">Contacto</h1>
         <div className="Contacto">
           <div data-aos="fade-right" className="Contacto-form">

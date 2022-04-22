@@ -294,7 +294,7 @@ function Admin() {
                     <Tab eventKey="contact" title="Mensajeria">
                         <div>
                             {alertSuccessM && (<Alert variant="success">{alertSuccessM}</Alert>)}
-                            <Table className="tabla-admin" responsive >
+                            <Table className="tabla-admin" responsive variant="dark">
                                 <thead>
                                     <tr className="tabla-admin">
                                         <th>Nombre y apellido</th>
