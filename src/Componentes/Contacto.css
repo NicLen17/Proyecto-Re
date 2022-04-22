@@ -81,7 +81,7 @@
 }
 
 .Input-contacto {
-    width: 100%;
+    width: 700px !important;
     background-color: #fe8b3938;
     border: #fe8a39 1px solid;
     transition: 0.2s;
@@ -91,6 +91,18 @@
 
 .Input-contacto:hover {
     background-color: #fe8b3963;
+}
+
+@media (max-width: 665px) {
+    .Input-contacto {
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 445px) {
+    .Input-contacto {
+        width: 100% !important;
+    }
 }
 
 .Contacto-boton {

@@ -442,17 +442,17 @@ function Admin() {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="selectsa">
-                                    <select
-                                        className="registerbut"
-                                        aria-label="Default select example"
-                                    >
-                                        <option defaultValue>{productEncontrado.categoria} </option>
-                                        <option value="Celular">Celular</option>
-                                        <option value="Tablet">Tablet</option>
-                                        <option value="Accesorios">Accesorio</option>
-                                        <option value="Otro">Otro</option>
-                                    </select>
-                                </Form.Group>
+                                <select className="registerbut" aria-label="Default select example"
+                                    name="categoria" onChange={(e) => handleChange(e)} required>
+                                    <option defaultValue>{productEncontrado.categoria} </option>
+                                    <option value="Diseño" >Diseño de piezas</option>
+                                    <option value="Decoracion">Decoracion</option>
+                                    <option value="Figuras">Figuras</option>
+                                    <option value="Llaveros">Llaveros</option>
+                                    <option value="Pokemon">Pokemon</option>
+                                    <option value="Otros">Otros</option>
+                                </select>
+                            </Form.Group>
                                 <div className="d-flex flex-wrap">
                                     {productEncontrado.img?.map((i, index) => (
                                         <div>

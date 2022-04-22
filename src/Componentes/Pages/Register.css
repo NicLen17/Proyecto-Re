@@ -1,5 +1,5 @@
 .Register-form {
-    margin-top: 50px;
+    margin-top: -20px;
     background: linear-gradient(-45deg, #f1683e, #3b0132, #230642);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -14,10 +14,24 @@
     text-align: start;
 }
 
+@media (max-width: 975px) {
+    .Register-form {
+        margin-top: 20px;
+    }
+}
+
 .Titulo-register-principal {
     color: white;
     font-size: 50px;
     margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 975px) {
+    .Titulo-register-principal {
+        font-size: 40px;
+        text-align: center;
+    }
 }
 
 .Input-register {
