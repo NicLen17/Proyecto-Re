@@ -41,16 +41,10 @@ export default function NavR({
                                     aria-label="Example text with button addon"
                                     aria-describedby="basic-addon1"
                                 />
-                                <Button className='Boton-busqueda' variant="outline-secondary" id="button-addon1">
+                            </InputGroup>
+                            <Button className='Boton-busqueda' variant="outline-secondary" id="button-addon1">
                                     <img style={{ height: "15px" }} src="https://icongr.am/octicons/search.svg?size=128&color=currentColor" alt="" />
                                 </Button>
-                            </InputGroup>
-
-                            {userName && (
-                                <Button style={{ color: "black" }} className='Boton-busqueda' onClick={logout}>
-                                    Cerrar Sesión
-                                </Button>
-                            )}
                             {userName && (
                                 <Nav.Link href="perfil" className='Nav-item'>
                                     <img
@@ -58,6 +52,11 @@ export default function NavR({
                                         alt="imagen"
                                     />{" "}
                                 </Nav.Link>
+                            )}
+                            {userName && (
+                                <Button style={{ color: "black" }} className='Boton-cuenta' onClick={logout}>
+                                    Cerrar Sesión
+                                </Button>
                             )}
                         </Navbar.Collapse>
                     </div>
