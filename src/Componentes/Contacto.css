@@ -7,12 +7,13 @@
 
 .Contacto-form {
     margin-top: 20px;
-    background: linear-gradient(-45deg, #f1683e, #3b0132, #230642);
+    background: linear-gradient(-45deg, #f1683e79, #3b013279, #23064279);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 700px;
+    max-width: 100%;
     height: 100%;
     display: flex;
     justify-content: center !important;
@@ -21,13 +22,43 @@
     text-align: start;
 }
 
+@media (max-width: 1366px) {
+    .Contacto-form {
+        margin: auto !important;
+        margin-top: 60px !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        margin-bottom: 50px !important;
+    }
+}
+
+@media (max-width: 975px) {
+    .Contacto-form {
+        margin: auto !important;
+        margin-top: 60px !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        margin-bottom: 50px !important;
+    }
+}
+
 .Titulo-contacto-principal {
     color: white;
+    margin: auto !important;
     font-size: 55px;
     border-bottom: 1px solid white;
-    margin-bottom: 100px;
-    margin-right: 300px;
-    margin-left: 300px;
+    margin-right: 300px !important;
+    margin-left: 300px !important;
+    margin-bottom: 80px !important;
+}
+
+@media (max-width: 975px) {
+    .Titulo-contacto-principal {
+        margin: auto !important;
+        margin-top: 100px !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+    }
 }
 
 .Otros-contactos {
@@ -35,12 +66,23 @@
     height: 700px !important;
 }
 
+@media (max-width: 975px) {
+    .Otros-contactos {
+        margin: auto !important;
+        margin-top: 10px !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        margin-bottom: 10px !important;
+    }
+}
+
 .Input-contacto {
-    width: 600px;
+    width: 100%;
     background-color: #fe8b3938;
     border: #fe8a39 1px solid;
     transition: 0.2s;
     color: white;
+    max-width: 600px !important;
 }
 
 .Input-contacto:hover {
@@ -56,7 +98,6 @@
     color: white;
 }
 
-
 .Form-titulos {
     text-align: start !important;
     color: rgb(255, 255, 255);
@@ -67,8 +108,8 @@
     width: 200px;
     height: 200px;
     border-radius: 150px;
-    -webkit-box-shadow: 0px 8px 15px 10px #fe8a39 ;
-    box-shadow: 0px 1px 9px 2px #fe8a39 ;;
+    -webkit-box-shadow: 0px 8px 15px 10px #fe8a39;
+    box-shadow: 0px 1px 9px 2px #fe8a39;
 }
 
 .Titulo-otrasR {
@@ -88,6 +129,11 @@
     color: #fe8a39 !important;
 }
 
+@media (max-width: 680px) {
+    .Redes-titulos {
+        display: none;
+    }
+}
 
 .Conteiner-titulo-redeS {
     display: flex;
@@ -105,6 +151,27 @@
     transition: 0.3s;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
+}
+
+@media (max-width: 680px) {
+    .Redes-contacto {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 530px) {
+    .Redes-contacto {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 325px) {
+    .Redes-contacto {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 .Redes-contacto:hover {
