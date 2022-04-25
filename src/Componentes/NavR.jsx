@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, FormControl, InputGroup, Nav, Navbar } from 'react-bootstrap'
-import { Link, Outlet } from 'react-router-dom'
+import { Button, Nav, Navbar } from 'react-bootstrap'
+import { Link, Outlet, useSearchParams } from 'react-router-dom'
 import './NavR.css'
 import Logo from '../img/01.jpg'
 
@@ -9,6 +9,14 @@ export default function NavR({
     userCategory,
     logout,
 }) {
+
+    const [query, setQuery] = useSearchParams();
+    const search = query.get("search");
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     return (
         <div>
             <div className='Nav-entera'>
@@ -34,17 +42,23 @@ export default function NavR({
                                     )}
                                 </div>
                             </Nav>
-                            <InputGroup className="Input-Nav">
-                                <FormControl
-                                    className="Input-Nav"
+                            <div>
+                                <form onSubmit={handleSubmit}>
+                                <input className="Input-Nav"
+                                    type="text"
+                                    value={search ?? ""}
                                     placeholder='Busqueda...'
                                     aria-label="Example text with button addon"
                                     aria-describedby="basic-addon1"
+                                    onChange={(e) => { const value = e.target.value;
+                                        setQuery({ search: value })
+                                    }}
                                 />
-                            </InputGroup>
+                                </form>
+                            </div>
                             <Button className='Boton-busqueda' variant="outline-secondary" id="button-addon1">
-                                    <img style={{ height: "15px" }} src="https://icongr.am/octicons/search.svg?size=128&color=currentColor" alt="" />
-                                </Button>
+                                <img style={{ height: "15px" }} src="https://icongr.am/octicons/search.svg?size=128&color=currentColor" alt="" />
+                            </Button>
                             {userName && (
                                 <Nav.Link href="perfil" className='Nav-item'>
                                     <img

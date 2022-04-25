@@ -9,6 +9,7 @@ import Carrito from './Componentes/Carrito';
 import Contacto from './Componentes/Contacto';
 import Register from './Componentes/Pages/Register';
 import Login from './Componentes/Pages/Login';
+import Perfil from './Componentes/Perfil';
 import { useEffect, useState } from 'react';
 import Admin from './Componentes/Pages/Admin';
 import axios from 'axios';
@@ -60,6 +61,8 @@ export default function App() {
             <Route path='/contacto' element={<Contacto />} />
 
             <Route path='/carrito' element={<Carrito />} />
+
+            <Route path='/perfil' element={<Perfil user={user} />} />
 
           </Route>
         </Routes>

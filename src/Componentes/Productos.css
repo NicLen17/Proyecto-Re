@@ -1,28 +1,53 @@
 .Productos-inicio {
     margin-top: 80px;
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     justify-content: center !important;
     justify-content: space-around !important;
 }
 
+@media only screen and (max-width: 1500px) {
+    .Productos-inicio{
+        flex-wrap: wrap !important;
+    }
+}
+
 .Filtros {
-    background-color: white;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    text-align: start;
+    color: white;
     width: 400px;
-    height: 10%;
+    height: 100% !important;
     border: 1px solid rgba(0, 0, 0, 0.24) !important;
-    -webkit-box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
-    box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+    background: linear-gradient(-45deg, #f1683e38, #3b013267, #230642); 
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid #f1683e !important;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .Filtros{
+
+    }
+}
+
+
+.Filtro-opciones {
+    background: linear-gradient(-45deg, #f1683e38, #3b013267, #230642); 
 }
 
 .Todos-productos {
     width: 1200px;
+    border-radius: 5px !important;
     height: 100% !important;
     min-height: 800px;
     background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.24) !important;
+    border: 1px solid #f1683e !important;
     -webkit-box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
     box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+    background: black;
 }
 
 .Cards-productos{
@@ -31,24 +56,61 @@
     justify-content: center !important;
     justify-content: space-around !important;
     text-decoration: none !important;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 20px !important;
+    margin-top: 10px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
 }
 
 .CardP-style {
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px !important;
     text-align: left;
     width: 300px;
     height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.24) !important;
-    -webkit-box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
-    box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+    background: linear-gradient(-45deg, #00000052, #3b0132) !important ;
     transition: 0.2s;
+    border: 1px solid #f1683e !important;
+}
+
+@media only screen and (max-width: 1450px) {
+    .CardP-style{
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .CardP-style{
+        width: 200px;
+        height: 290px;
+    }
+}
+
+.CardP-style:hover {
+    -webkit-box-shadow: 0px 0px 19px 8px #f1683e4f; 
+    box-shadow: 0px 0px 19px 8px #f1683e4f;
 }
 
 .Cardp-img {
+    border-radius: 5px;
+    border: 1px solid #f1683e !important;
+    margin-bottom: 10px;
     border: 1px rgba(0, 0, 0, 0.336) solid;
+    -webkit-box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 1450px) {
+    .Cardp-img{
+        height: 160px;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .Cardp-img{
+        height: 100px;
+    }
 }

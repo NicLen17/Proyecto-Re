@@ -9,11 +9,7 @@
 
 .Contacto-form {
     margin-top: 20px;
-    background: linear-gradient(-45deg, #f1683e79, #3b013279, #23064279);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(-45deg, #f1683e, #3b0132, #00000061, #230642);
     width: 700px;
     max-width: 100%;
     height: 100%;

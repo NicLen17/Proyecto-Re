@@ -63,6 +63,7 @@
     height: 250px;
     width: 300px;
     transition: 0.2s;
+    border: 5px solid black;
 }
 
 .CarroI-Img:hover {

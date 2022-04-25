@@ -1,5 +1,6 @@
 .Nav-entera {
     margin-bottom: 150px !important;
+    color: white !important;
 }
 
 @media only screen and (max-width: 675px) {
@@ -9,6 +10,7 @@
 }
 
 .Nav-bar {
+    color: white !important;
     background-color: black !important;
     font-size: 18px;
 }
@@ -40,6 +42,7 @@
 
 .Nav-item {
     transition: 0.2s !important;
+    color: white !important;
 }
 
 .Nav-item:hover {
@@ -56,6 +59,7 @@
     max-width: 100%;
     width: 300px !important;
     margin: auto !important;
+    color: white;
 }
 
 .Boton-busqueda {
