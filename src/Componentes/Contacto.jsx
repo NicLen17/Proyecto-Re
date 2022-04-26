@@ -18,7 +18,7 @@ export default function Contacto() {
   const [alertSuccess, setalertSuccess] = useState("")
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 600 });
   }, [])
 
   const handleSubmit = async (e) => {

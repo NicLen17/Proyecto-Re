@@ -2,6 +2,12 @@
     margin-top: 70px;
 }
 
+@media only screen and (max-width: 1366px) {
+    .Carro-Cont {
+        margin-bottom: -80px !important;
+    }
+}
+
 .CarroImg {
     width: 1200px;
     height: 550px;

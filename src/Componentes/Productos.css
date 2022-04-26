@@ -13,8 +13,9 @@
 }
 
 .Filtros {
-    display: flex !important;
-    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    justify-content: center  !important;
+    text-align: center !important;
     text-align: start;
     color: white;
     width: 400px;
@@ -23,19 +24,56 @@
     background: linear-gradient(-45deg, #f1683e38, #3b013267, #230642); 
     margin-right: 10px;
     margin-left: 10px;
+    margin-bottom: 50px;
     border: 1px solid #f1683e !important;
     border-radius: 4px;
 }
 
 @media only screen and (max-width: 1500px) {
     .Filtros{
-
+        
     }
 }
 
+.Botones-precio {
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    background-color: white !important;
+    border: 1px black solid !important;
+    transition: 0.3s !important;
+    border: #fe8a39 1px solid !important;
+    max-width: 100%;
+    border-radius: 4px !important;
+}
 
-.Filtro-opciones {
-    background: linear-gradient(-45deg, #f1683e38, #3b013267, #230642); 
+.Botones-precio:hover {
+    color:  black !important;
+    background-color: #f1683e !important;
+}
+
+.Botones-select {
+    text-decoration: none !important;
+    width: 250px;
+    height: 45px !important;
+    margin-bottom: 10px;
+    background-color: white !important;
+    border: 1px black solid !important;
+    transition: 0.2s !important;
+    border: #fe8a39 3px solid !important;
+    max-width: 100%;
+    height: 30px;
+    border-radius: 4px !important;
+    margin: auto !important;
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.Botones-select:hover {
+    color:  black !important;
+    background-color: #f1683e57 !important;
 }
 
 .Todos-productos {
@@ -50,9 +88,16 @@
     background: black;
 }
 
+@media only screen and (max-width: 1500px) {
+    .Todos-productos{
+        width: 850px;
+    }
+}
+
 .Cards-productos{
     display: flex !important;
     flex-wrap: wrap !important;
+    flex-direction: row !important;
     justify-content: center !important;
     justify-content: space-around !important;
     text-decoration: none !important;
@@ -86,6 +131,15 @@
     }
 }
 
+@media only screen and (max-width: 400px) {
+    .CardP-style{
+        width: 150px;
+        height: 340px;
+        max-height: 100%;
+    }
+}
+
+
 .CardP-style:hover {
     -webkit-box-shadow: 0px 0px 19px 8px #f1683e4f; 
     box-shadow: 0px 0px 19px 8px #f1683e4f;
@@ -112,5 +166,12 @@
 @media only screen and (max-width: 975px) {
     .Cardp-img{
         height: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .Cardp-img{
+        width: 110px;
+        height: 130px !important;
     }
 }

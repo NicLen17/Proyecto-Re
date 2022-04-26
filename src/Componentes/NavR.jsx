@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Nav, Navbar } from 'react-bootstrap'
+import { Button, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { Link, Outlet, useSearchParams } from 'react-router-dom'
 import './NavR.css'
 import Logo from '../img/01.jpg'
@@ -31,34 +31,25 @@ export default function NavR({
                                     <Nav.Link as={Link} to="/admin" className='Nav-item'>
                                         Administracion
                                     </Nav.Link>)}
-                                <Nav.Link className='Nav-item' as={Link} to="/productos" >Productos</Nav.Link>
                                 <Nav.Link className='Nav-item' as={Link} to="/contacto" >Contacto</Nav.Link>
-                                <div className="iconosnav">
-                                    {/* muestra el nombre del usuario, con la codicion que si no está logueado no muestre nada */}
-                                    {!userName && (
+                                {!userName && (
                                         <Nav.Link as={Link} to="/login" className='Nav-item'>
                                             Login{" "}
                                         </Nav.Link>
                                     )}
+                                <NavDropdown className='Nav-drop' variant="Nav-drop" title="Productos" id="basic-nav-dropdown">
+                                    <NavDropdown.Item as={Link} to="/productos">Todos los Productos</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/productos/llaveros">Llaveros</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/productos/figuras">Figuras</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/productos/pokemon">Pokemons</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/productos/decoracion">Decoracion</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/productos/disenos">Diseños de peizas</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/productos/otros">Otros</NavDropdown.Item>
+                                </NavDropdown>
+                                <div className="iconosnav">
+                                    {/* muestra el nombre del usuario, con la codicion que si no está logueado no muestre nada */}
                                 </div>
                             </Nav>
-                            <div>
-                                <form onSubmit={handleSubmit}>
-                                <input className="Input-Nav"
-                                    type="text"
-                                    value={search ?? ""}
-                                    placeholder='Busqueda...'
-                                    aria-label="Example text with button addon"
-                                    aria-describedby="basic-addon1"
-                                    onChange={(e) => { const value = e.target.value;
-                                        setQuery({ search: value })
-                                    }}
-                                />
-                                </form>
-                            </div>
-                            <Button className='Boton-busqueda' variant="outline-secondary" id="button-addon1">
-                                <img style={{ height: "15px" }} src="https://icongr.am/octicons/search.svg?size=128&color=currentColor" alt="" />
-                            </Button>
                             {userName && (
                                 <Nav.Link href="perfil" className='Nav-item'>
                                     <img

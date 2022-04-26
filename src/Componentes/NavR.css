@@ -50,34 +50,31 @@
     color: #fe8a39 !important;
 }
 
-.Input-Nav {
+.Nav-drop {
     border-radius: 5px;
     height: 43px !important;
     transition: 0.2s !important;
     border: #fe8a39 1px solid !important;
     background-color: #fe8b3938 !important;
     max-width: 100%;
-    width: 300px !important;
+    width: 190px !important;
     margin: auto !important;
     color: white;
-}
-
-.Boton-busqueda {
-    background-color: white !important;
-    border: 1px black solid !important;
-    height: 43px;
-    transition: 0.3s !important;
-    border: #fe8a39 1px solid !important;
 }
 
 .Boton-cuenta {
     background-color: white !important;
     border: 1px black solid !important;
-    transition: 0.3s !important;
+    transition: 0.2s !important;
     border: #fe8a39 1px solid !important;
     max-width: 100%;
 }
 
-.Input-Nav:hover {
+.Boton-cuenta:hover {
+    color: white !important;
+    background-color: #fe8b3963 !important;
+}
+
+.Nav-drop:hover {
     background-color: #fe8b3963 !important;
 }

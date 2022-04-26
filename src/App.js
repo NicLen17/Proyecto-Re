@@ -4,7 +4,6 @@ import NavR from './Componentes/NavR'
 import Footer from './Componentes/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Productos from './Componentes/Productos';
 import Carrito from './Componentes/Carrito';
 import Contacto from './Componentes/Contacto';
 import Register from './Componentes/Pages/Register';
@@ -13,6 +12,13 @@ import Perfil from './Componentes/Perfil';
 import { useEffect, useState } from 'react';
 import Admin from './Componentes/Pages/Admin';
 import axios from 'axios';
+import ProductosFiguras from './Componentes/ProductosFiguras';
+import ProductosDecoracion from './Componentes/ProductosDecoracion';
+import ProductosDiseño from './Componentes/ProductosDiseño';
+import ProductosLlaveros from './Componentes/ProductosLlaveros';
+import ProductosOtros from './Componentes/ProductosOtros';
+import ProductosPokemon from './Componentes/ProductosPokemon';
+import Productos from './Componentes/Productos';
 
 const localToken = JSON.parse(localStorage.getItem("token"))?.token || "";
 export default function App() {
@@ -51,6 +57,18 @@ export default function App() {
             <Route index element={<Inicio />} />
 
             <Route path='/productos' element={<Productos />} />
+
+            <Route path='/productos/pokemon' element={<ProductosPokemon />} />
+
+            <Route path='/productos/decoracion' element={<ProductosDecoracion />} />
+
+            <Route path='/productos/disenos' element={<ProductosDiseño />} />
+
+            <Route path='/productos/otros' element={<ProductosOtros />} />
+
+            <Route path='/productos/llaveros' element={<ProductosLlaveros />} />
+
+            <Route path='/productos/figuras' element={<ProductosFiguras />} />
 
             <Route path='/register' element={<Register setToken={setToken} />} />
 

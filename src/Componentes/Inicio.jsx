@@ -1,21 +1,21 @@
 import './Inicio.css'
 import React, { useEffect, useState } from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, EffectCoverflow, Autoplay } from "swiper";
 import './Carro.css'
-import sample from '../img/sample.jpeg'
 import Tarjeta from '../img/terjeta personal 1.jpg'
-import Cara from '../img/01.jpg'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import axios from 'axios';
+import "swiper/css/effect-coverflow";
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Inicio() {
   const [products, setProducts] = useState([]);
-
+  const sliceproducts = products.slice(-7)
   useEffect(() => {
     const productos = async () => {
       const { data } = await axios.get("/productos");
@@ -29,6 +29,18 @@ export default function Inicio() {
     <div>
       <div data-aos="fade-up" className="Carro-Cont">
         <Swiper
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          effect={"coverflow"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 1000,
+            modifier: 1,
+            slideShadows: true,
+          }}
           slidesPerView={1}
           spaceBetween={10}
           grabCursor={true}
@@ -37,7 +49,7 @@ export default function Inicio() {
             clickable: false,
           }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Navigation, EffectCoverflow, Autoplay]}
           className="mySwiper, Carro-Swip"
         >
           <SwiperSlide><img className="CarroImg" src={Tarjeta} alt="" /></SwiperSlide>
@@ -63,7 +75,7 @@ export default function Inicio() {
             modules={[Pagination, Navigation]}
             className="mySwiper, Inicio-swip"
           >
-            {products.map((prod) => {
+            {sliceproducts.map((prod) => {
               return (prod && (
                 <SwiperSlide><img className='CarroI-Img' src={prod.img[0]} alt="" /></SwiperSlide>
               )
@@ -76,36 +88,64 @@ export default function Inicio() {
         </div>
         <div className='Inicio-Cards'>
           <div className='CardI'>
+          <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/figuras">
             <Card className='CardI-style'>
-              <Card.Img className='CardI-img' variant="top" src="https://w7.pngwing.com/pngs/554/591/png-transparent-computer-icons-product-sample-tally-miscellaneous-text-service-thumbnail.png" />
+              <Card.Img className='CardI-img' variant="top" src="https://i.ytimg.com/vi/C4HAJ5HLuB4/maxresdefault.jpg" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title style={{marginTop: "15px"}}>Figuras</Card.Title>
               </Card.Body>
             </Card>
+            </NavLink>
           </div>
           <div className='CardI'>
+          <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/decoracion">
             <Card className='CardI-style'>
-              <Card.Img className='CardI-img' variant="top" src="https://w7.pngwing.com/pngs/554/591/png-transparent-computer-icons-product-sample-tally-miscellaneous-text-service-thumbnail.png" />
+              <Card.Img className='CardI-img' variant="top" src="https://i.pinimg.com/originals/de/c7/58/dec758df84f22775856177e44c116653.png" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title style={{marginTop: "15px"}}>Decoracion</Card.Title>
               </Card.Body>
             </Card>
+            </NavLink>
           </div>
           <div className='CardI'>
+          <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/diseño">
             <Card className='CardI-style'>
-              <Card.Img className='CardI-img' variant="top" src="https://w7.pngwing.com/pngs/554/591/png-transparent-computer-icons-product-sample-tally-miscellaneous-text-service-thumbnail.png" />
+              <Card.Img className='CardI-img' variant="top" src="https://wobpress.files.wordpress.com/2014/08/43283_24-impresora3d.jpeg" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title style={{marginTop: "15px"}}>Diseños de piezas</Card.Title>
               </Card.Body>
             </Card>
+            </NavLink>
           </div>
           <div className='CardI'>
+          <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/pokemon">
             <Card className='CardI-style'>
-              <Card.Img className='CardI-img' variant="top" src="https://w7.pngwing.com/pngs/554/591/png-transparent-computer-icons-product-sample-tally-miscellaneous-text-service-thumbnail.png" />
+              <Card.Img className='CardI-img' variant="top" src="https://images.cults3d.com/52-LfRJzOJaIb7U7Ra6r0QJQcJo=/https://files.cults3d.com/uploads/collection/shot_es/19/Pokemon_3D_printing_fichier_3D_stl_files_cults_3d_printer_imprimante_3D.jpg" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title style={{marginTop: "15px"}}>Pokemons</Card.Title>
               </Card.Body>
             </Card>
+            </NavLink>
+          </div>
+          <div className='CardI'>
+          <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/llaveros">
+            <Card className='CardI-style'>
+              <Card.Img className='CardI-img' variant="top" src="https://images.cults3d.com/BU_isbYQcHMOoF7NM0ttpysUxcs=/https://files.cults3d.com/uploaders/1748905/illustration-file/1449805546-1030-0631/Superheroes_keychains.jpg" />
+              <Card.Body>
+                <Card.Title style={{marginTop: "15px"}}>Llaveros</Card.Title>
+              </Card.Body>
+            </Card>
+            </NavLink>
+          </div>
+          <div className='CardI'>
+            <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/otros">
+            <Card className='CardI-style'>
+              <Card.Img className='CardI-img' variant="top" src="https://thumbs.dreamstime.com/b/icono-del-signo-m%C3%A1s-s%C3%ADmbolo-positivo-117088500.jpg" />
+              <Card.Body>
+                <Card.Title style={{marginTop: "15px"}}>Otros</Card.Title>
+              </Card.Body>
+            </Card>
+            </NavLink>
           </div>
         </div>
       </div>
