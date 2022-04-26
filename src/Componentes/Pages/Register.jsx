@@ -15,6 +15,7 @@ import React, { useEffect } from "react";
 import "./Register.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "../ScrollToTop";
 
 export default function Register({ setToken }) {
     const [validated, setValidated] = useState(false);
@@ -182,6 +183,7 @@ export default function Register({ setToken }) {
                     </Card>
                 </Col>
             </Row>
+            <ScrollToTop />
         </Container>
     );
 }

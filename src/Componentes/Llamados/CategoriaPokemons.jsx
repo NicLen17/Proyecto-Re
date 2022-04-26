@@ -1,6 +1,6 @@
 import '../Productos.css'
 import React from 'react'
-import { Button, Card, Dropdown, Form } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -23,9 +23,9 @@ export default function CategoriaPokemons() {
       Aos.init({ duration: 2000 });
   
   return (
-    <div>
+    <div className="Cards-productos">
     {products.map((prod) => {
-    return (prod.categoria === "POKEMONS" && (
+    return (prod.categoria === "POKEMON" && (
       <NavLink
         key={prod._id}
         style={{ textDecorationLine: "none" }}

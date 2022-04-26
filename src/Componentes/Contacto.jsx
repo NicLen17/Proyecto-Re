@@ -5,6 +5,7 @@ import './Contacto.css'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import axios from "axios";
+import ScrollToTop from './ScrollToTop'
 import Logo from '../img/01.jpg'
 
 
@@ -124,6 +125,7 @@ export default function Contacto() {
           </div>
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 }

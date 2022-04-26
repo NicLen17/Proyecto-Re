@@ -12,12 +12,6 @@
     margin-right: 160px;
 }
 
-@media only screen and (max-width: 675px) {
-    .CarroI-Img  {
-        width: 100% !important;
-    }
-}   
-
 @media only screen and (max-width: 880px) {
     .Titulo-inicio {
         text-align: center;
@@ -29,28 +23,10 @@
     }
 }   
 
-
 .Inicio-swip {
-    -webkit-box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
-    box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.39);
-    border-top: #f1683e 1px solid;
-    border-bottom: #f1683e 1px solid;
     border-radius: 3px;
     width: 100% !important;
-    height: 220px;
-}
-
-@media only screen and (max-width: 530px) {
-    .Inicio-swip  {
-        width: 100% !important;
-    }
-}   
-
-@media only screen and (max-width: 1366px) {
-    .Inicio-swip  {
-        width: 100% !important;
-    }
-}   
+} 
 
 .Carro-Inicio {
     width: 100% !important;
@@ -60,40 +36,62 @@
     margin-bottom: 80px;
 }
 
-@media only screen and (max-width: 530px) {
-    .Carro-Inicio {
-        margin: auto;
-        width: 100%;
+.CarroI-Img {
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+    height: 300px;
+    width: 400px;
+    transition: 0.2s;
+    border: #fe8a39 solid 3px;
+}
+
+@media only screen and (max-width: 950px) {
+    .Inicio-swip {
+        width: 100% !important;
+        margin: auto !important;
     }
 }   
 
-.CarroI-Img {
-    height: 250px;
-    width: 300px;
-    transition: 0.2s;
-    border: 5px solid black;
-}
-
-@media only screen and (max-width: 1366px) {
-    .CarroI-Img  {
+@media only screen and (max-width: 950px) {
+    .Carro-Inicio {
+        margin: auto !important;
         width: 100% !important;
+        height: 300px;
     }
-}
+}   
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
     .CarroI-Img {
-        width: 300px !important;
+        width: 200px !important;
+        height: 200px !important;
+        height: 300px;
     }
-}  
+}   
+
+
+@media only screen and (max-width: 530px) {
+    .Inicio-swip {
+        width: 100% !important;
+        margin: auto !important;
+    }
+}   
+
+@media only screen and (max-width: 530px) {
+    .Carro-Inicio {
+        margin: auto !important;
+        width: 90% !important;
+    }
+}   
 
 @media only screen and (max-width: 530px) {
     .CarroI-Img {
-        width: 300px !important;
+        width: 200px !important;
+        height: 200px !important;
     }
 }   
 
 .CarroI-Img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .Inicio-Cards {

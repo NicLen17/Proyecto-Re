@@ -6,6 +6,7 @@ import React from "react";
 import "./Login.css";
 import Aos from 'aos'
 import "aos/dist/aos.css"
+import ScrollToTop from "../ScrollToTop";
 
 export default function Login({ setUser, setToken }) {
   const [input, setInput] = useState({});
@@ -78,6 +79,7 @@ export default function Login({ setUser, setToken }) {
           </Link>
         </Row>
       </Form>
+      <ScrollToTop />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 
 export default function Productos() {
   const [products, setProducts] = useState([]);
@@ -49,7 +50,7 @@ export default function Productos() {
                   exact
                   as={NavLink}
                 >
-                  <div >
+                  <div>
                     <Card className="CardP-style">
                       <Card.Body>
                         <div className="Cardp-imgcont">
@@ -70,6 +71,7 @@ export default function Productos() {
           </div>
         </div>
       </div>
+      <ScrollToTop />
     </div>
   )
 }

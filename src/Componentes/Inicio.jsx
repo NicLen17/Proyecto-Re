@@ -12,6 +12,7 @@ import "aos/dist/aos.css"
 import axios from 'axios';
 import "swiper/css/effect-coverflow";
 import { Link, NavLink } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 
 export default function Inicio() {
   const [products, setProducts] = useState([]);
@@ -30,16 +31,8 @@ export default function Inicio() {
       <div data-aos="fade-up" className="Carro-Cont">
         <Swiper
           autoplay={{
-            delay: 3000,
+            delay: 3500,
             disableOnInteraction: false,
-          }}
-          effect={"coverflow"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 1000,
-            modifier: 1,
-            slideShadows: true,
           }}
           slidesPerView={1}
           spaceBetween={10}
@@ -49,7 +42,7 @@ export default function Inicio() {
             clickable: false,
           }}
           navigation={true}
-          modules={[Pagination, Navigation, EffectCoverflow, Autoplay]}
+          modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper, Carro-Swip"
         >
           <SwiperSlide><img className="CarroImg" src={Tarjeta} alt="" /></SwiperSlide>
@@ -62,27 +55,39 @@ export default function Inicio() {
         <div data-aos="fade-right" className='Titulo-inicio'>
           <h1>Agregados recientemente</h1>
         </div>
-        <div className='Carro-Inicio'>
-          <Swiper
-            slidesPerView={6}
-            spaceBetween={0}
-            loop={true}
-            grabCursor={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className="mySwiper, Inicio-swip"
-          >
+        <div data-aos="fade-up" className="Carro-Inicio">
+        <Swiper
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          effect={"coverflow"}
+          coverflowEffect={{
+            rotate: 40,
+            stretch: 50,
+            depth: 500,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          slidesPerView={3}
+          spaceBetween={10}
+          grabCursor={false}
+          loop={true}
+          pagination={{
+            clickable: false,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, EffectCoverflow, Autoplay]}
+          className="mySwiper, Inicio-swip"
+        >
             {sliceproducts.map((prod) => {
               return (prod && (
-                <SwiperSlide><img className='CarroI-Img' src={prod.img[0]} alt="" /></SwiperSlide>
+                <SwiperSlide><img className='CarroI-Img ' src={prod.img[0]} alt="" /></SwiperSlide>
               )
               );
             })}
-          </Swiper>
-        </div>
+        </Swiper>
+      </div>
         <div className='Titulo-inicio'>
           <h1>Categorias</h1>
         </div>
@@ -108,7 +113,7 @@ export default function Inicio() {
             </NavLink>
           </div>
           <div className='CardI'>
-          <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/diseño">
+          <NavLink style={{ textDecoration: "none"}} as={Link} to="/productos/disenos">
             <Card className='CardI-style'>
               <Card.Img className='CardI-img' variant="top" src="https://wobpress.files.wordpress.com/2014/08/43283_24-impresora3d.jpeg" />
               <Card.Body>
@@ -149,6 +154,7 @@ export default function Inicio() {
           </div>
         </div>
       </div>
+      <ScrollToTop />
     </div>
   )
 }
