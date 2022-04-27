@@ -82,7 +82,7 @@ export default function Inicio() {
         >
             {sliceproducts.map((prod) => {
               return (prod && (
-                <SwiperSlide><img className='CarroI-Img ' src={prod.img[0]} alt="" /></SwiperSlide>
+                <SwiperSlide><img className='CarroI-Img' src={prod.img[0]} alt="inicio-imgs" /></SwiperSlide>
               )
               );
             })}

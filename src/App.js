@@ -19,6 +19,7 @@ import ProductosLlaveros from './Componentes/ProductosLlaveros';
 import ProductosOtros from './Componentes/ProductosOtros';
 import ProductosPokemon from './Componentes/ProductosPokemon';
 import Productos from './Componentes/Productos';
+import ProdIndividual from './Componentes/ProdIndividual';
 
 const localToken = JSON.parse(localStorage.getItem("token"))?.token || "";
 export default function App() {
@@ -69,6 +70,8 @@ export default function App() {
             <Route path='/productos/llaveros' element={<ProductosLlaveros />} />
 
             <Route path='/productos/figuras' element={<ProductosFiguras />} />
+
+            <Route path='/individual/:id' element={<ProdIndividual />} />
 
             <Route path='/register' element={<Register setToken={setToken} />} />
 
