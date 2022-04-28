@@ -1,0 +1,28 @@
+.Perfil-cont {
+    background: linear-gradient(-45deg, #f1683e, #00000061, #3b0132, #230642);
+    margin: auto !important;
+    border-top: #fe8a39 3px solid;
+    border-bottom: #fe8a39 3px solid;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+.Perfil-img-cont {
+    margin-top: 25px;
+    border-radius: 25px !important;
+}
+
+.Perfil-img {
+    margin-top: 15px;
+    border-radius: 155px;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 25px !important;
+    border: #800c46 5px solid;
+}
+
+.Perfil-info {
+    color: white !important;
+    margin-bottom: 55px !important;
+}

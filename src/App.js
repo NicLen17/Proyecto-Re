@@ -21,6 +21,7 @@ import ProductosPokemon from './Componentes/ProductosPokemon';
 import Productos from './Componentes/Productos';
 import ProdIndividual from './Componentes/ProdIndividual';
 import EnvioConsulta from './Componentes/EnvioConsulta';
+import Seccion404 from './Componentes/Seccion404';
 
 const localToken = JSON.parse(localStorage.getItem("token"))?.token || "";
 export default function App() {
@@ -87,6 +88,8 @@ export default function App() {
             <Route path='/carrito' element={<Carrito />} />
 
             <Route path='/perfil' element={<Perfil user={user} />} />
+
+            <Route path="*" element={<Seccion404 />}/>
 
           </Route>
         </Routes>

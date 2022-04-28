@@ -1,9 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { getBase64 } from './utils/img';
-
-const exampleImage =
-    'https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg';
+import './Perfil.css'
 
 export default function Profile({ user }) {
     const [image, setImage] = useState('');
@@ -16,32 +14,22 @@ export default function Profile({ user }) {
     };
 
     return (
-        <div className="text-center bg-white p-2 my-5">
-            <div className="d-flex justify-content-center align-items-end ml-4 m-2">
-                <div
-                    className="rounded-circle overflow-hidden d-flex align-items-center "
-                    style={{ width: 100, height: 100, border: '2px solid #18809a' }}
-                >
-                    <img className="img-fluid" src={image || user.image || exampleImage} alt="profile" />
+        <div>
+            <br />
+            <div className="Perfil-cont">
+                <div>
+                    <div className="Perfil-img-cont">
+                        <img className="Perfil-img" src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/foto-de-perfil-para-instagram-1024x538.png" alt="profile" />
+                    </div>
                 </div>
-                <label htmlFor="file-input" style={{ cursor: 'pointer' }}>
-                    <img
-                        src="https://icongr.am/feather/camera.svg?size=128&color=293f8e"
-                        alt="camera edit"
-                        width="20"
-                    />
-                </label>
-                <input
-                    id="file-input"
-                    className="d-none"
-                    accept="image/png, image/jpeg"
-                    type="file"
-                    onChange={onChangeImg}
-                />
+                <div className='Perfil-info'>
+                    <p><b style={{ color: "#fe8a39"}}>Nombre:</b> {user.nombre}</p>
+                    <p><b style={{ color: "#fe8a39"}}>Mail:</b> {user.email}</p>
+                    <p><b style={{ color: "#fe8a39"}}>Celular:</b> {user.celular}</p>
+                    {/* <FormUser token={token} /> */}
+                </div>
             </div>
-            <p>Nombre: {user.nombre}</p>
-            <p>Mail: {user.email}</p>
-            {/* <FormUser token={token} /> */}
+            <br />
         </div>
     );
 }

@@ -1,0 +1,104 @@
+.celbody {
+    margin: auto;
+    margin-top: 110px;
+    margin-bottom: 100px;
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+    width: 400px;
+    border-radius: 35px;
+    border: black solid 20px;
+    border-bottom: solid black 75px;
+    border-top: solid black 35px;
+    -webkit-box-shadow: 0px 10px 13px -7px #fe8a39, 19px 25px 11px -1px #fe8a39; 
+box-shadow: 0px 10px 13px 3px #fe8a39, 19px 25px 11px -1px #fe8a39;
+}
+
+.celpantalla {
+    border-top: solid rgb(44, 41, 41) 25px;
+    background-color: rgb(211, 210, 210);
+    height: 605px;
+}
+
+.bateria {
+    margin-top: -55px;
+    margin-left: 324px;
+}
+
+.notificacion {
+    margin-top: -105px;
+    margin-right: 330px;
+}
+
+.blutetoh {
+    margin-top: -150px;
+    margin-right: 280px;
+}
+
+.wifi {
+    margin-top: -195px;
+    margin-left: 260px;
+}
+
+.alarma {
+    margin-top: -241px;
+    margin-right: 240px;
+}
+
+.botoncel {
+    padding: 5px 5px 5px 5px;
+    background-color: rgb(53, 51, 51);
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 402px) {
+    .celbody {
+        margin: auto;
+        width: 350px !important;
+        margin-bottom: 50px;
+        margin-top: 180px;
+        box-shadow: none;
+    }
+}   
+
+@media only screen and (max-width: 352px) {
+    .celbody {
+        margin: auto;
+        width: 280px !important;
+        margin-bottom: 50px;
+        margin-top: 200px;
+        box-shadow: none;
+    }
+}   
+
+@media only screen and (max-width: 352px) {
+    .inputcel {
+        width: 150px !important;
+    }
+}   
+
+@media only screen and (max-width: 402px) {
+    .bateria {
+        margin-left: 280px;
+    }
+}   
+
+@media only screen and (max-width: 402px) {
+    .wifi {
+        margin-left: 220px;
+    }
+}   
+
+@media only screen and (max-width: 402px) {
+    .blutetoh {
+        margin-right: 200px;
+    }
+}   
+
+@media only screen and (max-width: 402px) {
+    .cosascel {
+        display: none;
+    }
+}   
+
+
+
