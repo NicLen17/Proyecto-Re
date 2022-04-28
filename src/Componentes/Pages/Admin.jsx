@@ -16,6 +16,7 @@ import "./Admin.css";
 import { getBase64 } from "../utils/img";
 import { NavLink, useNavigate } from "react-router-dom";
 import AgregadoProducto from '../AgregadoProducto'
+import ScrollToTop from '../ScrollToTop'
 
 function Admin() {
     const Navigate = useNavigate();
@@ -220,10 +221,8 @@ function Admin() {
                                     <tr>
                                         <th>Categoria</th>
                                         <th>Nombre</th>
-                                        <th>Stock</th>
                                         <th>Precio</th>
                                         <th>Descripcion</th>
-                                        <th>Color</th>
                                         <th>imagen</th>
                                     </tr>
                                 </thead>
@@ -233,7 +232,6 @@ function Admin() {
                                             <tr key={product._id}>
                                                 <td>{product.categoria}</td>
                                                 <td>{product.nombre}</td>
-                                                <td>{product.stock}</td>
                                                 <td>{product.price}</td>
                                                 <td>{product.descripcion}</td>
                                                 <td>
@@ -485,23 +483,6 @@ function Admin() {
                                         la imagen es obligaroria!
                                     </Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Stock Disponible</Form.Label>
-                                    <Form.Control
-                                        name="stock"
-                                        onChange={(e) => handleChange(e)}
-                                        type="number"
-                                        placeholder="stock"
-                                        className="registerlabelagregado w-25"
-                                        required
-                                        defaultValue={productEncontrado.stock}
-                                        min="0"
-                                        max="100"
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        La cantidad disponible es obligatoria! STOCK
-                                    </Form.Control.Feedback>
-                                </Form.Group>
                                 <Form.Group className="selectsa">
                                     <select className="registerbut" aria-label="Default select example"
                                         name="categoria" onChange={(e) => handleChange(e)} required>
@@ -636,6 +617,7 @@ function Admin() {
                     </Modal>
                 </div>
             ))}
+             <ScrollToTop />
         </div>
     );
 }

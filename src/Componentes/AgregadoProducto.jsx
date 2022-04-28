@@ -129,22 +129,6 @@ export default function AgregadoProducto({ productos }) {
                                     La imagen es obligaroria!
                                 </Form.Control.Feedback>
                             </Form.Group>
-                            <Form.Group>
-                                <Form.Label className='Form-titulos'>Stock Disponible</Form.Label>
-                                <Form.Control
-                                    name="stock"
-                                    onChange={(e) => handleChange(e)}
-                                    type="number"
-                                    placeholder="stock"
-                                    className="Input-register w-25"
-                                    required
-                                    min="0"
-                                    max="100"
-                                />
-                                <Form.Control.Feedback type="invalid">
-                                    La cantidad disponible es obligatoria! STOCK
-                                </Form.Control.Feedback>
-                            </Form.Group>
                             <Form.Group className="selectsa">
                                 <select className="registerbut" aria-label="Default select example"
                                     name="categoria" onChange={(e) => handleChange(e)} required>

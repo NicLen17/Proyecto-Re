@@ -9,14 +9,6 @@ export default function NavR({
     userCategory,
     logout,
 }) {
-
-    const [query, setQuery] = useSearchParams();
-    const search = query.get("search");
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
-
     return (
         <div>
             <div className='Nav-entera'>
