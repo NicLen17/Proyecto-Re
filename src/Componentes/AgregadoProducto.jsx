@@ -72,7 +72,7 @@ export default function AgregadoProducto({ productos }) {
                     <Card.Body>
                         <Form noValidate validated={validated} onSubmit={handleSubmit}>
                             <Form.Group className="reginputconteineragregado" controlId="validationCustom02">
-                                <Form.Label className='Form-titulos'>Marca</Form.Label>
+                                <Form.Label className='Form-titulos'>Nombre</Form.Label>
                                 <Form.Control
                                     name="nombre"
                                     onChange={(e) => handleChange(e)}
