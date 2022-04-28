@@ -286,7 +286,7 @@ function Admin() {
                                         <tr key={usuarios._id}>
                                             <td>{usuarios.nombre}</td>
                                             <td>{usuarios.celular}</td>
-                                            <td>{usuarios.email}</td>
+                                            <td className="Form-titulos">{usuarios.email}</td>
                                             <td>
                                                 <ToggleButton
                                                     id="toggle-check"
@@ -326,8 +326,8 @@ function Admin() {
                                     {mensajes.map((msj) => (
                                         <tr key={msj.id}>
                                             <td>{msj.nombreyapellido}</td>
-                                            <td>
-                                                <a href={msj.email}>{msj.email}</a>
+                                            <td className="Form-titulos">
+                                                {msj.email}
                                             </td>
                                             <td>{msj.tel}</td>
                                             <td>
@@ -366,8 +366,8 @@ function Admin() {
                                     {consultas.map((cst) => (
                                         <tr key={cst.id}>
                                             <td>{cst.producto}</td>
-                                            <td>
-                                                <a href={cst.email}>{cst.email}</a>
+                                            <td className="Form-titulos">
+                                            {cst.email}
                                             </td>
                                             <td>{cst.tel}</td>
                                             <td>
@@ -395,25 +395,26 @@ function Admin() {
             {
                 <Modal show={show} backdrop="static" keyboard={false}>
                     <Modal.Header
-                        className="editarformtitulo"
+                        className="Header-edit"
                         closeButton={() => setShow(false)}
+                        onClick={() => { setShow(false); setInput({}); setAlert(""); setValidated(false) }}
                     >
-                        <Modal.Title>
+                        <Modal.Title className="Titulo-editar">
                             Editar {productEncontrado.nombre}
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body className="editarform" style={{ width: "100%" }}>
+                    <Modal.Body className="Form-editar" style={{ width: "100%" }}>
                         <Container>
                             {alert && <Alert variant="danger">{alert}</Alert>}
                             <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                                <Form.Group className="" controlId="validationCustom02">
+                                <Form.Group controlId="validationCustom02">
                                     <Form.Control.Feedback type="invalid">
                                         Se requiere el fabricante del producto!
                                     </Form.Control.Feedback>
                                     <Form.Control.Feedback>Recibido</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group className="" controlId="validationCustom01">
-                                    <Form.Label>Nombre del producto</Form.Label>
+                                <Form.Group controlId="validationCustom01">
+                                    <Form.Label className="Form-titulos">Nombre del producto</Form.Label>
                                     <Form.Control
                                         name="nombre"
                                         onChange={(e) => handleChange(e)}
@@ -429,7 +430,7 @@ function Admin() {
                                     <Form.Control.Feedback>Recibido</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>Precio</Form.Label>
+                                    <Form.Label className="Form-titulos">Precio</Form.Label>
                                     <Form.Control
                                         name="price"
                                         onChange={(e) => handleChange(e)}
@@ -445,7 +446,7 @@ function Admin() {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="" controlId="validationCustomUsername">
-                                    <Form.Label>Caracteristicas</Form.Label>
+                                    <Form.Label className="Form-titulos">Caracteristicas</Form.Label>
                                     <InputGroup hasValidation>
                                         <Form.Control
                                             minLength="6"
@@ -464,7 +465,7 @@ function Admin() {
                                     </InputGroup>
                                 </Form.Group>
                                 <Form.Group controlId="formFile" className="mb-3">
-                                    <Form.Label className="">
+                                    <Form.Label className="Form-titulos">
                                         Agregar imagen del producto de forma local
                                     </Form.Label>
                                     <Form.Group
@@ -498,22 +499,22 @@ function Admin() {
                                         </div>
                                     ))}
                                 </div>
-                                <Modal.Footer className="editarformtitulo">
-                                    <Button
-                                        className="registerbut"
-                                        variant="registerbut"
-                                        onClick={() => { setShow(false); setInput({}); setAlert(""); setValidated(false) }}
-                                    >
-                                        Cerrar
-                                    </Button>
-                                    <Button
-                                        className="registerbut"
-                                        variant="registerbut"
-                                        type="submit"
-                                    >
-                                        Listo
-                                    </Button>
-                                </Modal.Footer>
+
+                                <Button
+                                    className="Editar-boton"
+                                    variant="registerbut"
+                                    onClick={() => { setShow(false); setInput({}); setAlert(""); setValidated(false) }}
+                                >
+                                    Cerrar
+                                </Button>
+                                <Button
+                                    className="Editar-boton"
+                                    variant="registerbut"
+                                    type="submit"
+                                >
+                                    Listo
+                                </Button>
+
                             </Form>
                         </Container>
                     </Modal.Body>
@@ -527,12 +528,12 @@ function Admin() {
                         backdrop="static"
                         keyboard={false}
                     >
-                        <Modal.Header closeButton>
-                            <Modal.Title>Mensaje</Modal.Title>
+                        <Modal.Header className="Form-editar" closeButton>
+                            <Modal.Title className="Form-titulos">Mensaje</Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>
-                            <p>Datos del cliente:</p>
-                            <div>
+                        <Modal.Body className="Form-editar">
+                            <p className="Form-titulos">Datos del cliente:</p>
+                            <div className="Form-titulos">
                                 Nombre: {mensajeEncontrado.nombreyapellido}
                                 <br />
                                 Mail: {mensajeEncontrado.email}
@@ -545,9 +546,9 @@ function Admin() {
                                 <br /><br />
                             </div>
                         </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
-                                Close
+                        <Modal.Footer className="Form-editar">
+                            <Button variant="dasdas" className="Editar-boton" onClick={handleClose}>
+                                Cerrar
                             </Button>
                         </Modal.Footer>
                     </Modal>
@@ -561,12 +562,12 @@ function Admin() {
                         backdrop="static"
                         keyboard={false}
                     >
-                        <Modal.Header closeButton>
-                            <Modal.Title>Consulta</Modal.Title>
+                        <Modal.Header className="Form-editar" closeButton>
+                            <Modal.Title className="Form-titulos">Consulta</Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>
-                            <p>Datos del cliente:</p>
-                            <div>
+                        <Modal.Body className="Form-editar">
+                            <p className="Form-titulos">Datos del cliente:</p>
+                            <div className="Form-titulos">
                                 Nombre: {consultaEncontrado.nombreyapellido}
                                 <br />
                                 Mail: {consultaEncontrado.email}
@@ -582,9 +583,9 @@ function Admin() {
                                 <br /><br />
                             </div>
                         </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose3}>
-                                Close
+                        <Modal.Footer className="Form-editar">
+                            <Button variant="sadas" className="Editar-boton" onClick={handleClose3}>
+                                Cerrar
                             </Button>
                         </Modal.Footer>
                     </Modal>
@@ -612,7 +613,7 @@ function Admin() {
                     </Modal>
                 </div>
             ))}
-             <ScrollToTop />
+            <ScrollToTop />
         </div>
     );
 }

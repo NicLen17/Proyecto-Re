@@ -26,3 +26,23 @@
     background-color: white !important;
     border: #fe8a39 solid 2px;
 }
+
+.Form-editar {
+    background: linear-gradient(-45deg, #f1683e, #3b0132, #000000, #230642);
+}
+
+.Titulo-editar {
+    color: rgb(255, 255, 255) !important;
+}
+
+.Header-edit {
+    background: linear-gradient(-45deg, #f1683e, #3b0132, #000000, #230642);
+}
+
+.Editar-boton {
+    width: 150px;
+    margin-top: 15px !important;
+    border: #fe8a39 solid 1px !important;
+    background-color: #fe8b3963;
+    color: white;
+}
