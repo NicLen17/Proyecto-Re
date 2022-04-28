@@ -20,6 +20,7 @@ import ProductosOtros from './Componentes/ProductosOtros';
 import ProductosPokemon from './Componentes/ProductosPokemon';
 import Productos from './Componentes/Productos';
 import ProdIndividual from './Componentes/ProdIndividual';
+import EnvioConsulta from './Componentes/EnvioConsulta';
 
 const localToken = JSON.parse(localStorage.getItem("token"))?.token || "";
 export default function App() {
@@ -80,6 +81,8 @@ export default function App() {
             <Route path='/admin' element={<Admin user={user.nombre} />} />
 
             <Route path='/contacto' element={<Contacto />} />
+
+            <Route path='/consultas' element={<EnvioConsulta />} />
 
             <Route path='/carrito' element={<Carrito />} />
 

@@ -1,0 +1,113 @@
+.Consulta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center;
+    justify-content: space-evenly;
+    overflow: hidden !important;
+    margin: auto !important;
+}
+
+.Consulta-form {
+    margin-top: 20px;
+    background: linear-gradient(-45deg, #f1683e, #3b0132, #00000061, #230642);
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center !important;
+    border-top: #fe8a39 1px solid;
+    border-bottom: #fe8a39 1px solid;
+    text-align: start;
+    overflow: hidden !important;
+}
+
+@media (max-width: 1366px) {
+    .Consulta-form {
+        margin: auto !important;
+        margin-top: 60px !important;
+        margin-bottom: 50px !important;
+    }
+}
+
+@media (max-width: 975px) {
+    .Consulta-form {
+        margin: auto !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        margin-top: 120px !important;
+        margin-bottom: 50px !important;
+        border: #fe8a39 1px solid;
+        border-radius: 10px;
+    }
+}
+
+.otrasR-Consultas {
+    margin-top: 15px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.Conteiner-redeS-consultas {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.Redes-consultas {
+    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 15px;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.Redes-consultas:hover {
+    transform: scale(1.1);
+}
+
+
+.Titulo-consulta-secundario {
+    color: white;
+    margin: auto !important;
+    font-size: 25px;
+    margin-bottom: 25px !important;
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 975px) {
+    .Titulo-consulta-secundario {
+        margin: auto !important;
+        margin-top: 100px !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        overflow: hidden !important;
+    }
+}
+
+@media (max-width: 975px) {
+    .Titulo-consulta-secundario {
+        margin-top: -15px !important;
+    }
+}
+
+.Select-consulta {
+    text-decoration: none !important;
+    width: 250px;
+    height: 45px !important;
+    margin-bottom: 10px;
+    background-color: white !important;
+    border: 1px black solid !important;
+    transition: 0.2s !important;
+    border: #fe8a39 3px solid !important;
+    max-width: 100%;
+    height: 30px;
+    border-radius: 4px !important;
+    margin: auto !important;
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+}

@@ -4,7 +4,7 @@
     height: 100% !important;
     display: flex;
     justify-content: center !important;
-    border-radius: 25px;
+    border-radius: 5px;
     border: #fe8a39 solid 1px !important;
     text-align: start;
 }

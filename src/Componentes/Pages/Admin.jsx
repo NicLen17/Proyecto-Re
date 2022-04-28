@@ -23,6 +23,7 @@ function Admin() {
     const [token, setToken] = useState(localToken); //cuando no tenemos un token generado la const Token es un string vacio.
     const [products, setProducts] = useState([]);
     const [mensajes, setMensajes] = useState([]);
+    const [consultas, setConsultas] = useState([]);
     const [imagenes, setImagenes] = useState({});
     const [lusers, setLusers] = useState([]);
     const [alertSuccess, setalertSuccess] = useState("");
@@ -30,11 +31,13 @@ function Admin() {
     const [alert, setAlert] = useState("");
     const [productEncontrado, setProductEncontrado] = useState({});
     const [mensajeEncontrado, setmensajeEncontrado] = useState({});
+    const [consultaEncontrado, setconsultaEncontrado] = useState({});
     const [input, setInput] = useState({});
     const [responderDuda, setresponderDuda] = useState([]);
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
+    const [show3, setShow3] = useState(false);
     const [validated, setValidated] = useState(false);
 
     useEffect(() => {
@@ -50,6 +53,7 @@ function Admin() {
         } else {
             Navigate('/login');
         }
+        consulta();
         mensaje();
         productos();
         getListaUsuarios();
@@ -62,6 +66,10 @@ function Admin() {
     const mensaje = async () => {
         const { data } = await axios.get("/mensajes");
         setMensajes(data);
+    };
+    const consulta = async () => {
+        const { data } = await axios.get("/consultas");
+        setConsultas(data);
     };
 
     async function deleteProducto(id) {
@@ -80,6 +88,16 @@ function Admin() {
             await axios.delete(`/mensajes/${id}`);
             mensaje();
             setalertSuccessM("Mensaje eliminado correctamente");
+        }
+        setTimeout(() => {
+            setalertSuccess("");
+        }, 5000);
+    }
+    async function deleteConsulta(id) {
+        if (window.confirm("Estas seguro que deseas eliminar?")) {
+            await axios.delete(`/consultas/${id}`);
+            consulta();
+            setalertSuccessM("Consulta eliminada correctamente");
         }
         setTimeout(() => {
             setalertSuccess("");
@@ -166,6 +184,13 @@ function Admin() {
         setInput(mensajeEncontrado);
     };
 
+    const verConsulta = async (id) => {
+        const consultaEncontrado = await consultas.find((c) => c._id === id);
+        setShow3(true);
+        setconsultaEncontrado(consultaEncontrado)
+        setInput(consultaEncontrado);
+    };
+
     const responder = async (id) => {
         const responderDuda = await lusers.find((u) => u._id === id);
         setShow2(true);
@@ -174,6 +199,7 @@ function Admin() {
 
     const handleClose = () => setShow1(false);
     const handleClose2 = () => setShow2(false);
+    const handleClose3 = () => setShow3(false);
 
     return (
         <div>
@@ -183,7 +209,7 @@ function Admin() {
                     variant="tabs"
                     defaultActiveKey="profile"
                     id="uncontrolled-tab-example"
-                    className="mb-3 Tabsh"
+                    className="mb-3 Tabs-adm"
                 >
                     <Tab className="colortab" eventKey="home" title="Productos">
                         <div>
@@ -304,7 +330,7 @@ function Admin() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {mensajes.map((msj) => (
+                                    {mensajes.map((msj) => (
                                         <tr key={msj.id}>
                                             <td>{msj.nombreyapellido}</td>
                                             <td>
@@ -324,10 +350,45 @@ function Admin() {
                                                 >
                                                     Eliminar
                                                 </button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </Table>
+                        </div>
+                    </Tab>
+                    <Tab eventKey="consult" title="Consultas">
+                        <div>
+                            {alertSuccessM && (<Alert variant="success">{alertSuccessM}</Alert>)}
+                            <Table className="tabla-admin" responsive variant="dark">
+                                <thead>
+                                    <tr className="tabla-admin">
+                                        <th>Nombre y apellido</th>
+                                        <th>correo electronico</th>
+                                        <th>telefono</th>
+                                        <th>mensaje</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {consultas.map((cst) => (
+                                        <tr key={cst.id}>
+                                            <td>{cst.producto}</td>
+                                            <td>
+                                                <a href={cst.email}>{cst.email}</a>
+                                            </td>
+                                            <td>{cst.tel}</td>
+                                            <td>
                                                 <button
-                                                    className="btn btn-primary ms-1"
-                                                    onClick={responder}>
-                                                    Responder
+                                                    className="btn btn-success mr-1 ms-2"
+                                                    onClick={() => verConsulta(cst._id)}
+                                                >
+                                                    Ver Consulta
+                                                </button>{" "}
+                                                <button
+                                                    className="btn btn-danger"
+                                                    onClick={() => deleteConsulta(cst._id)}
+                                                >
+                                                    Eliminar
                                                 </button>
                                             </td>
                                         </tr>
@@ -442,17 +503,17 @@ function Admin() {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="selectsa">
-                                <select className="registerbut" aria-label="Default select example"
-                                    name="categoria" onChange={(e) => handleChange(e)} required>
-                                    <option defaultValue>{productEncontrado.categoria} </option>
-                                    <option value="Diseño" >Diseño de piezas</option>
-                                    <option value="Decoracion">Decoracion</option>
-                                    <option value="Figuras">Figuras</option>
-                                    <option value="Llaveros">Llaveros</option>
-                                    <option value="Pokemon">Pokemon</option>
-                                    <option value="Otros">Otros</option>
-                                </select>
-                            </Form.Group>
+                                    <select className="registerbut" aria-label="Default select example"
+                                        name="categoria" onChange={(e) => handleChange(e)} required>
+                                        <option defaultValue>{productEncontrado.categoria} </option>
+                                        <option value="Diseño" >Diseño de piezas</option>
+                                        <option value="Decoracion">Decoracion</option>
+                                        <option value="Figuras">Figuras</option>
+                                        <option value="Llaveros">Llaveros</option>
+                                        <option value="Pokemon">Pokemon</option>
+                                        <option value="Otros">Otros</option>
+                                    </select>
+                                </Form.Group>
                                 <div className="d-flex flex-wrap">
                                     {productEncontrado.img?.map((i, index) => (
                                         <div>
@@ -516,6 +577,43 @@ function Admin() {
                     </Modal>
                 </div>
             }
+            {
+                <div>
+                    <Modal
+                        show={show3}
+                        onHide={handleClose3}
+                        backdrop="static"
+                        keyboard={false}
+                    >
+                        <Modal.Header closeButton>
+                            <Modal.Title>Consulta</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <p>Datos del cliente:</p>
+                            <div>
+                                Nombre: {consultaEncontrado.nombreyapellido}
+                                <br />
+                                Mail: {consultaEncontrado.email}
+                                <br />
+                                Tel: {consultaEncontrado.tel}
+                                <br />
+                                <br />
+                                Producto: {consultaEncontrado.producto}
+                                <br />
+                                <br />
+                                Consulta: <br />
+                                {consultaEncontrado.mensaje}
+                                <br /><br />
+                            </div>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose3}>
+                                Close
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
+                </div>
+            }
             {lusers.map((usuarios) => (
                 <div>
                     <Modal
@@ -528,7 +626,7 @@ function Admin() {
                             <Modal.Title>Mensaje</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary">
