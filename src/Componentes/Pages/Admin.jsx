@@ -367,7 +367,7 @@ function Admin() {
                                         <tr key={cst.id}>
                                             <td>{cst.producto}</td>
                                             <td className="Form-titulos">
-                                            {cst.email}
+                                                {cst.email}
                                             </td>
                                             <td>{cst.tel}</td>
                                             <td>
@@ -416,12 +416,12 @@ function Admin() {
                                 <Form.Group controlId="validationCustom01">
                                     <Form.Label className="Form-titulos">Nombre del producto</Form.Label>
                                     <Form.Control
+                                        disabled
                                         name="nombre"
                                         onChange={(e) => handleChange(e)}
                                         required
                                         type="text"
                                         placeholder="Nombre del producto"
-                                        className="registerlabel"
                                         defaultValue={productEncontrado.nombre}
                                     />
                                     <Form.Control.Feedback type="invalid">
@@ -437,7 +437,6 @@ function Admin() {
                                         type="number"
                                         min="0"
                                         placeholder="$$$"
-                                        className="registerlabel"
                                         required
                                         defaultValue={productEncontrado.price}
                                     />
@@ -455,7 +454,6 @@ function Admin() {
                                             as="textarea"
                                             placeholder="Caracteristicas principales del producto"
                                             aria-describedby="inputGroupPrepend"
-                                            className="registerlabel"
                                             required
                                             defaultValue={productEncontrado.descripcion}
                                         />
@@ -499,7 +497,6 @@ function Admin() {
                                         </div>
                                     ))}
                                 </div>
-
                                 <Button
                                     className="Editar-boton"
                                     variant="registerbut"
