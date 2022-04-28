@@ -192,19 +192,13 @@ function Admin() {
         setInput(consultaEncontrado);
     };
 
-    const responder = async (id) => {
-        const responderDuda = await lusers.find((u) => u._id === id);
-        setShow2(true);
-        setresponderDuda(responderDuda)
-    };
-
     const handleClose = () => setShow1(false);
     const handleClose2 = () => setShow2(false);
     const handleClose3 = () => setShow3(false);
 
     return (
         <div>
-            <div className="tablacont">
+            <div className="Tabla-cont">
                 <Tabs
                     fill
                     variant="tabs"
@@ -216,7 +210,7 @@ function Admin() {
                         <div>
                             <AgregadoProducto productos={productos} />
                             {alertSuccess && <Alert variant="success">{alertSuccess}</Alert>}
-                            <Table responsive striped bordered hover variant="dark">
+                            <Table className="tabla-admin" responsive striped bordered hover variant="dark">
                                 <thead>
                                     <tr>
                                         <th>Categoria</th>
@@ -224,6 +218,7 @@ function Admin() {
                                         <th>Precio</th>
                                         <th>Descripcion</th>
                                         <th>imagen</th>
+                                        <th>Funciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -273,10 +268,10 @@ function Admin() {
                             </Table>
                         </div>
                     </Tab>
-                    <Tab eventKey="profile" title="Usuarios">
+                    <Tab className="colortab" eventKey="profile" title="Usuarios">
                         <div>
                             {alertSuccess && <Alert variant="success">{alertSuccess}</Alert>}
-                            <Table responsive striped bordered hover variant="dark">
+                            <Table className="tabla-admin" responsive striped bordered hover variant="dark">
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -318,7 +313,7 @@ function Admin() {
                     <Tab eventKey="contact" title="Mensajeria">
                         <div>
                             {alertSuccessM && (<Alert variant="success">{alertSuccessM}</Alert>)}
-                            <Table className="tabla-admin" responsive variant="dark">
+                            <Table className="tabla-admin" responsive striped bordered hover variant="dark">
                                 <thead>
                                     <tr className="tabla-admin">
                                         <th>Nombre y apellido</th>
@@ -358,7 +353,7 @@ function Admin() {
                     <Tab eventKey="consult" title="Consultas">
                         <div>
                             {alertSuccessM && (<Alert variant="success">{alertSuccessM}</Alert>)}
-                            <Table className="tabla-admin" responsive variant="dark">
+                            <Table className="tabla-admin" responsive striped bordered hover variant="dark">
                                 <thead>
                                     <tr className="tabla-admin">
                                         <th>Nombre y apellido</th>

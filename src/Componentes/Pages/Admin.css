@@ -4,3 +4,25 @@
     border-bottom: #fe8a39 1px solid;
     color: white !important;
 }
+.editarformtitulo {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+@media only screen and (max-width: 670px) {
+    .Tabla-cont{
+        margin-top: 150px;
+    }
+}
+
+@media only screen and (max-width: 597px) {
+    .Tabla-cont{
+        margin-top: 100px;
+    }
+}
+
+.tabla-admin {
+    background-color: white !important;
+    border: #fe8a39 solid 2px;
+}
