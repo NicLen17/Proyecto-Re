@@ -31,7 +31,7 @@ export default function ProdIndividual() {
         </div>
         <div className='ProdInd-Info'>
           <h1>{product.nombre}</h1>
-          <h5>{product.categoria}</h5>
+          <h5 style={{ color: "#fe8a39" }}>{product.categoria}</h5>
           <h2><b style={{ color: "#fe8a39" }}>$</b>{product.price}</h2>
           <p style={{ fontSize: "15px", maxInlineSize: "415px", marginTop: "20px", textJustify: "initial" }}>
             {product.descripcion}

@@ -3,6 +3,13 @@
     margin-bottom: 200px;
 }
 
+@media (max-width: 975px) {
+    .loginForm {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+}
+
 .login-form {
     background: linear-gradient(-45deg, #f1683e, #3b0132, #00000061, #230642);
     width: 500px;
