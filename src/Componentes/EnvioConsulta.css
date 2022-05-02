@@ -70,6 +70,12 @@
     transform: scale(1.1);
 }
 
+@media only screen and (max-width: 420px) {
+    .Redes-consultas {
+        width: 60px;
+        height: 60px;
+    }
+}
 
 .Titulo-consulta-secundario {
     color: white;

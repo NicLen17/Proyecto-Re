@@ -195,6 +195,7 @@ function Admin() {
     const handleClose = () => setShow1(false);
     const handleClose2 = () => setShow2(false);
     const handleClose3 = () => setShow3(false);
+    const [checked, setChecked] = useState(false);
 
     return (
         <div>
@@ -202,10 +203,62 @@ function Admin() {
                 <Tabs
                     fill
                     variant="tabs"
-                    defaultActiveKey="profile"
+                    defaultActiveKey="home"
                     id="uncontrolled-tab-example"
                     className="mb-3 Tabs-adm"
                 >
+                    <Tab className="colortab" eventKey="profile" title="Usuarios">
+                        <div>
+                            {alertSuccess && <Alert variant="success">{alertSuccess}</Alert>}
+                            <Table className="tabla-admin" responsive striped bordered hover variant="dark">
+                                <thead>
+                                    <tr>
+                                        <th>Funciones</th>
+                                        <th>Estado</th>
+                                        <th>Nombre</th>
+                                        <th>Telefono</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        lusers.map((usuarios) => (
+                                            <tr key={usuarios._id}>
+                                                    <td>
+                                                    <ToggleButton
+                                                        id="toggle-check"
+                                                        type="checkbox"
+                                                        variant="primary"
+                                                        checked={usuarios.estado}
+                                                        value="1"
+                                                        onClick={() => stateUser(usuarios._id)}
+                                                        onChange={(e) => setChecked(e.currentTarget.checked)}
+                                                    >
+                                                        Habil./Deshab.
+                                                    </ToggleButton>
+                                                </td>
+                                                <td>
+                                                    <ToggleButton
+                                                        className="mb-2"
+                                                        id="toggle-check"
+                                                        type="checkbox"
+                                                        variant="outline-success"
+                                                        checked={usuarios.estado}
+                                                        value="1"
+                                                        onChange={(e) => setChecked(e.currentTarget.checked)}
+                                                    >
+                                                    </ToggleButton>
+                                                </td>
+                                                <td>{usuarios.nombre}</td>
+                                                <td>{usuarios.celular}</td>
+                                                <td className="Form-titulos">{usuarios.email}</td>
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                            </Table>
+                        </div>
+                    </Tab>
                     <Tab className="colortab" eventKey="home" title="Productos">
                         <div>
                             <AgregadoProducto productos={productos} />
@@ -264,48 +317,6 @@ function Admin() {
                                             </tr>
                                         ))
                                     }
-                                </tbody>
-                            </Table>
-                        </div>
-                    </Tab>
-                    <Tab className="colortab" eventKey="profile" title="Usuarios">
-                        <div>
-                            {alertSuccess && <Alert variant="success">{alertSuccess}</Alert>}
-                            <Table className="tabla-admin" responsive striped bordered hover variant="dark">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Teléfono</th>
-                                        <th>Email</th>
-                                        <th>Estado</th>
-                                        <th>Funciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {lusers.map((usuarios) => (
-                                        <tr key={usuarios._id}>
-                                            <td>{usuarios.nombre}</td>
-                                            <td>{usuarios.celular}</td>
-                                            <td className="Form-titulos">{usuarios.email}</td>
-                                            <td>
-                                                <ToggleButton
-                                                    id="toggle-check"
-                                                    type="checkbox"
-                                                    variant="secondary"
-                                                    checked={usuarios.estado}
-                                                ></ToggleButton>
-                                            </td>
-                                            <td>
-                                                <button
-                                                    onClick={() => stateUser(usuarios._id)}
-                                                    type="button"
-                                                    className="btn btn-primary"
-                                                >
-                                                    Habil./Deshab.
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    ))}
                                 </tbody>
                             </Table>
                         </div>

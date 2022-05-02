@@ -123,11 +123,12 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 545px) {
     .CardP-style{
-        width: 150px;
-        height: 340px;
-        max-height: 100%;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        width: 350px;
+        height: 100%;
     }
 }
 
@@ -161,9 +162,9 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 545px) {
     .Cardp-img{
-        width: 110px;
-        height: 130px !important;
+        width: 100%;
+        height: 180px !important;
     }
 }

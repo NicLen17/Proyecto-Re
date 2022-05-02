@@ -98,6 +98,8 @@
 @media (max-width: 445px) {
     .Input-contacto {
         width: 100% !important;
+        margin-left: 3px !important;
+        margin-right: 3px !important;
     }
 }
 
@@ -111,6 +113,8 @@
 }
 
 .Form-titulos {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
     text-align: start !important;
     color: rgb(255, 255, 255);
     font-size: 20px;
