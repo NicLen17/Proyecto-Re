@@ -12,7 +12,8 @@
 }
 
 .Filtros {
-    margin-top: 40px;
+    margin: auto !important;
+    margin-top: 40px !important;
     flex-direction: column !important;
     justify-content: center  !important;
     text-align: center !important;
@@ -22,12 +23,22 @@
     height: 100% !important;
     border: 1px solid rgba(0, 0, 0, 0.24) !important;
     background: linear-gradient(-45deg, #f1683e38, #3b013267, #230642); 
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 10px !important;
     border: 1px solid #f1683e !important;
     border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 19px 8px #f1683e4f; 
+    box-shadow: 0px 0px 19px 8px #f168;
 }
+
+@media only screen and (max-width: 745px) {
+    .Filtros{
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 19px 8px #f1683e4f; 
+        box-shadow: 0px 0px 19px 8px #f168;
+        margin-top: 110px !important;
+    }
+}
+
 
 .Botones-precio {
     width: 250px;
@@ -71,7 +82,7 @@
 }
 
 .Todos-productos {
-    width: 1200px;
+    width: 1500px;
     border-radius: 4px !important;
     height: 100% !important;
     min-height: 800px;
@@ -81,30 +92,30 @@
 
 @media only screen and (max-width: 1500px) {
     .Todos-productos{
-        width: 850px;
+        width: 1250px;
     }
 }
 
 .Cards-productos{
     display: flex !important;
-    flex-wrap: wrap-reverse !important;
+    flex-wrap: wrap !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     text-decoration: none !important;
     margin-bottom: 20px !important;
-    margin-top: 10px !important;
     margin-right: 10px !important;
     margin-left: 10px !important;
 }
 
 .CardP-style {
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
     margin-bottom: 20px !important;
     text-align: left;
-    width: 300px;
-    height: 100%;
+    width: 270px;
+    height: 400px;
+    min-height: 100%;
     background: linear-gradient(-45deg, #00000052, #3b0132) !important ;
     transition: 0.2s;
     border: 1px solid #f1683e !important;
@@ -116,22 +127,27 @@
     }
 }
 
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 1105px) {
     .CardP-style{
         width: 200px;
         height: 290px;
     }
 }
 
-@media only screen and (max-width: 545px) {
+@media only screen and (max-width: 700px) {
     .CardP-style{
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-        width: 350px;
+        margin: auto !important;
         height: 100%;
+        margin-top: 15px !important;
     }
 }
 
+@media only screen and (max-width: 425px) {
+    .CardP-style{
+        width: 100% !important;;
+        height: 100%;
+    }
+}
 
 .CardP-style:hover {
     -webkit-box-shadow: 0px 0px 19px 8px #f1683e4f; 
