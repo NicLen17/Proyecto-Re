@@ -1,18 +1,25 @@
 import './Productos.css'
 import React from 'react'
-import { NavDropdown } from 'react-bootstrap'
+import { NavDropdown, Spinner } from 'react-bootstrap'
 import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { Link,  } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import CategoriaFiguras from './Llamados/CategoriaFiguras'
 import ScrollToTop from './ScrollToTop';
 import Filtros from './Llamados/Filtros'
 
 export default function Productos() {
   const [products, setProducts] = useState([]);
+  const [cargador, setCargador] = useState(false);
 
+  useEffect(() => {
+    setCargador(true)
+    setTimeout(() => {
+      setCargador(false)
+    }, 7250);
+  }, [])
   // const precioFiltro = products.filter(prod => prod.price < 500)
 
   useEffect(() => {
@@ -29,11 +36,25 @@ export default function Productos() {
       <Filtros />
       <div data-aos="fade" className='Productos-inicio'>
         <div className='Todos-productos'>
-          <div className="Cards-productos">
-            <div>
-              <CategoriaFiguras />
-            </div>
-          </div>
+          {
+            cargador ?
+
+              <div className='Cargador-cont'>
+                <Spinner className='mt-2 Cargador-productos' animation="border" variant="danger" />
+                <div>
+                  <p style={{ color: "white", marginTop: "20px" }}>La carga puede llevar un momento...</p>
+                </div>
+              </div>
+
+              :
+
+              <div className="Cards-productos">
+                <div>
+                  <CategoriaFiguras />
+                </div>
+              </div>
+
+          }
         </div>
       </div>
       <ScrollToTop />

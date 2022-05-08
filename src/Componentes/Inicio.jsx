@@ -1,6 +1,6 @@
 import './Inicio.css'
 import React, { useEffect, useState } from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Spinner } from 'react-bootstrap'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,6 +15,15 @@ import { Link, NavLink } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 
 export default function Inicio() {
+  const [cargador, setCargador] = useState(false);
+
+  useEffect(() => {
+    setCargador(true)
+    setTimeout(() => {
+      setCargador(false)
+    }, 5000);
+  }, [])
+
   const [products, setProducts] = useState([]);
   const sliceproducts = products.slice(-7)
   useEffect(() => {
@@ -56,7 +65,14 @@ export default function Inicio() {
           <h1>Agregados recientemente</h1>
         </div>
         <div data-aos="fade-up" className="Carro-Inicio">
-        <Swiper
+        {
+  cargador ? 
+  
+  <Spinner className='mt-5 Cargador-productos' animation="border" variant="danger" />
+
+  :
+
+  <Swiper
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -87,6 +103,7 @@ export default function Inicio() {
               );
             })}
         </Swiper>
+}
       </div>
         <div className='Titulo-inicio'>
           <h1>Categorias</h1>

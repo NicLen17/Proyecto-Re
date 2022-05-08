@@ -37,7 +37,7 @@ export default function CategoriaDecoracion() {
                   <div className="Cardp-imgcont">
                     <img style={{ objectFit: "cover" }} className="Cardp-img" src={prod.img[0]} alt="" />
                   </div>
-                  <Card.Title>{prod.nombre}</Card.Title>
+                  <b st><Card.Title>{prod.nombre}</Card.Title></b>
                   <Card.Text className="module line-clamp">
                     {prod.descripcion}
                   </Card.Text>

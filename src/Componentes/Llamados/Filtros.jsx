@@ -13,7 +13,7 @@ export default function Filtros() {
                     <NavDropdown.Item as={Link} to="/productos/figuras">Figuras</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/productos/pokemon">Pokemons</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/productos/decoracion">Decoracion</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/productos/diseño">Diseños de peizas</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/productos/disenos">Diseños de peizas</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/productos/otros">Otros</NavDropdown.Item>
                 </NavDropdown>
             </div>
