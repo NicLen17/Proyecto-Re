@@ -54,12 +54,12 @@
     border-radius: 5px;
     height: 43px !important;
     transition: 0.2s !important;
-    border: #fe8a39 1px solid !important;
-    background-color: #fe8b3938 !important;
     max-width: 100%;
-    width: 190px !important;
+    width: 120px !important;
     margin: auto !important;
     color: white;
+    background-color: #fe8b3963 !important;
+    border: #fe8a39 1px solid;
 }
 
 .Boton-cuenta {
@@ -76,5 +76,5 @@
 }
 
 .Nav-drop:hover {
-    background-color: #fe8b3963 !important;
+    background-color: #fe8a39 !important;
 }

@@ -18,6 +18,8 @@ import ProductosDiseño from './Componentes/ProductosDiseño';
 import ProductosLlaveros from './Componentes/ProductosLlaveros';
 import ProductosOtros from './Componentes/ProductosOtros';
 import ProductosPokemon from './Componentes/ProductosPokemon';
+import ProductosPrecioBajo from './Componentes/ProductosPrecioBajo';
+import ProductosPrecioAlto from './Componentes/ProductosPrecioAlto';
 import Productos from './Componentes/Productos';
 import ProdIndividual from './Componentes/ProdIndividual';
 import EnvioConsulta from './Componentes/EnvioConsulta';
@@ -59,7 +61,11 @@ export default function App() {
 
             <Route index element={<Inicio />} />
 
-            <Route path='/productos' element={<Productos />} />
+            <Route path='/productos' element={<Productos />} /> 
+            
+            <Route path='/productos/precios/bajos' element={<ProductosPrecioBajo />} /> 
+
+            <Route path='/productos/precios/altos' element={<ProductosPrecioAlto />} /> 
 
             <Route path='/productos/pokemon' element={<ProductosPokemon />} />
 

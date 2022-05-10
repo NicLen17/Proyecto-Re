@@ -126,6 +126,7 @@ export default function EnvioConsulta() {
                                 <a href="https://www.instagram.com/zeta.ross.3d/"><img className='Redes-consultas' src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
                                 <a href="https://api.whatsapp.com/send?phone=543816072290"><img className='Redes-consultas' src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a>
                             </section>
+                            <p style={{fontSize: "15px", color: "white", textAlign: "center"}}>Seras contactado segun los datos completados</p>
                         </Form>
                     </div>
                 </div>

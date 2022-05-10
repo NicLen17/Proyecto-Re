@@ -30,6 +30,13 @@
     box-shadow: 0px 0px 19px 8px #f168;
 }
 
+.Filtro-Productios {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 @media only screen and (max-width: 745px) {
     .Filtros {
         width: 100%;
@@ -81,6 +88,7 @@
 }
 
 .Todos-productos {
+    justify-content: center !important;
     width: 1500px;
     border-radius: 4px !important;
     height: 100% !important;
