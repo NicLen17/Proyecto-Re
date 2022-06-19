@@ -5,8 +5,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-axios.defaults.baseURL = 'https://zetaross-back2.herokuapp.com/api/';
-// axios.defaults.baseURL = 'http://localhost:4000/api/';
+
+axios.defaults.baseURL = 'http://localhost:4000/api/';
 
 ReactDOM.render(
   <React.StrictMode>

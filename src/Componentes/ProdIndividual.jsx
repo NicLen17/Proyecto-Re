@@ -26,7 +26,7 @@ export default function ProdIndividual() {
       <div className="ProdInd">
         <div className="ProdInd-Cont">
           <div data-Aos="fade" className="Img-ProdCont">
-            <img className="Img-ProdInd" src={product.img?.[0]} alt="Producto principal" />
+            <img className="Img-ProdInd" src={product.img} alt="Producto principal" />
           </div>
         </div>
         <div className='ProdInd-Info'>

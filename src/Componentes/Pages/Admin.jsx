@@ -13,7 +13,6 @@ import {
     ToggleButton,
 } from "react-bootstrap";
 import "./Admin.css";
-import { getBase64 } from "../utils/img";
 import { NavLink, useNavigate } from "react-router-dom";
 import AgregadoProducto from '../AgregadoProducto'
 import ScrollToTop from '../ScrollToTop'
@@ -149,16 +148,6 @@ function Admin() {
         }
         productos();
     };
-    const onChangeImg = async (e) => {
-        const imagenesArray = [];
-        const imagenesInput = e.target.files;
-        for (let i = 0; i < imagenesInput.length; i++) {
-            const base64 = await getBase64(imagenesInput[i]);
-            imagenesArray.push(base64);
-            const iman = { ...input, img: imagenesArray };
-            setInput(iman);
-        }
-    };
 
     const handleChange = (e) => {
         setAlert("");
@@ -287,7 +276,7 @@ function Admin() {
                                                         <img
                                                             style={{ width: "150px", height: "120px" }}
                                                             src={e}
-                                                            alt="imagen celulares"
+                                                            alt="imagen producto"
                                                         />
                                                     ))}{" "}
                                                 </td>
@@ -477,16 +466,18 @@ function Admin() {
                                     <Form.Label className="Form-titulos">
                                         Agregar imagen del producto de forma local
                                     </Form.Label>
-                                    <Form.Group
-                                        controlId="formFileMultiple"
-                                        className="mb-3"
-                                        onChange={(e) => { onChangeImg(e); }}
-                                    >
-                                        <Form.Control type="file" multiple />
-                                    </Form.Group>
+                                    <InputGroup hasValidation>
+                                    <Form.Control
+                                        name="img"
+                                        onChange={(e) => handleChange(e)}
+                                        type="url"
+                                        placeholder="url de la imagen"
+                                        aria-describedby="inputGroupPrepend"
+                                    />
                                     <Form.Control.Feedback type="invalid">
-                                        la imagen es obligaroria!
+                                        La imagen es obligaroria!
                                     </Form.Control.Feedback>
+                                </InputGroup>
                                 </Form.Group>
                                 <Form.Group className="selectsa">
                                     <select className="registerbut" aria-label="Default select example"

@@ -21,7 +21,7 @@ export default function Inicio() {
     setCargador(true)
     setTimeout(() => {
       setCargador(false)
-    }, 6550);
+    }, 2550);
   }, [])
 
   const [products, setProducts] = useState([]);
@@ -98,7 +98,7 @@ export default function Inicio() {
         >
             {sliceproducts.map((prod) => {
               return (prod && (
-                <SwiperSlide><img className='CarroI-Img' src={prod.img[0]} alt="inicio-imgs" /></SwiperSlide>
+                <SwiperSlide><img className='CarroI-Img' src={prod.img} alt="inicio-imgs" /></SwiperSlide>
               )
               );
             })}

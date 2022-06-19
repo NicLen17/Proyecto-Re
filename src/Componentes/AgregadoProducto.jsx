@@ -121,13 +121,20 @@ export default function AgregadoProducto({ productos }) {
                                 </InputGroup>
                             </Form.Group>
                             <Form.Group controlId="formFile" className="mb-3">
-                                <Form.Label className='Form-titulos Input-register'>Agregar imagen del producto de forma local</Form.Label>
-                                <Form.Group controlId="formFileMultiple" className="mb-3" onChange={(e) => onChangeImg(e)}>
-                                    <Form.Control type="file" multiple />
-                                </Form.Group>
-                                <Form.Control.Feedback type="invalid">
-                                    La imagen es obligaroria!
-                                </Form.Control.Feedback>
+                                <Form.Label className='Form-titulos Input-register mt-2'>Agregar imagen del producto de forma local</Form.Label>
+                                <InputGroup hasValidation>
+                                    <Form.Control
+                                        name="img"
+                                        onChange={(e) => handleChange(e)}
+                                        type="url"
+                                        placeholder="url de la imagen"
+                                        aria-describedby="inputGroupPrepend"
+                                        required
+                                    />
+                                    <Form.Control.Feedback type="invalid">
+                                        La imagen es obligaroria!
+                                    </Form.Control.Feedback>
+                                </InputGroup>
                             </Form.Group>
                             <Form.Group className="selectsa">
                                 <select className="registerbut" aria-label="Default select example"

@@ -17,7 +17,7 @@ export default function Productos() {
     setCargador(true)
     setTimeout(() => {
       setCargador(false)
-    }, 7250);
+    }, 1550);
   }, [])
   // const precioFiltro = products.filter(prod => prod.price < 500)
 
@@ -62,7 +62,7 @@ export default function Productos() {
                         <Card className="CardP-style">
                           <Card.Body>
                             <div className="Cardp-imgcont">
-                              <img style={{ objectFit: "cover" }} className="Cardp-img" src={prod.img[0]} alt="" />
+                              <img style={{ objectFit: "cover" }} className="Cardp-img" src={prod.img} alt="" />
                             </div>
                             <b><Card.Title>{prod.nombre}</Card.Title></b>
                             <Card.Text className="module line-clamp">
