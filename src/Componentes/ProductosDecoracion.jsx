@@ -18,7 +18,7 @@ export default function Productos() {
     setCargador(true)
     setTimeout(() => {
       setCargador(false)
-    }, 7250);
+    }, 1250);
   }, [])
   // const precioFiltro = products.filter(prod => prod.price < 500)
 

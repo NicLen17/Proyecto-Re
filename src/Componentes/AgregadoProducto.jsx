@@ -56,7 +56,7 @@ export default function AgregadoProducto({ productos }) {
     const handleChange = (e) => {
         setAlert("");
         const { name, value } = e.target;
-        const productoInput = { ...input, ...imagenes, [name]: value.toUpperCase() };
+        const productoInput = { ...input, ...imagenes, [name]: value.toString() };
         setInput(productoInput);
     };
 

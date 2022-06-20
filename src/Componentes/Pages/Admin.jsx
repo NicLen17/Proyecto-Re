@@ -155,7 +155,7 @@ function Admin() {
         const productoInput = {
             ...input,
             ...imagenes,
-            [name]: value.toUpperCase(),
+            [name]: value.toString(),
         };
         console.log(productoInput)
         setInput(productoInput);
