@@ -121,7 +121,7 @@ export default function AgregadoProducto({ productos }) {
                                 </InputGroup>
                             </Form.Group>
                             <Form.Group controlId="formFile" className="mb-3">
-                                <Form.Label className='Form-titulos Input-register mt-2'>Agregar imagen del producto de forma local</Form.Label>
+                                <Form.Label className='Form-titulos Input-register mt-2'>Agregar imagen del producto mediante URL</Form.Label>
                                 <InputGroup hasValidation>
                                     <Form.Control
                                         name="img"
