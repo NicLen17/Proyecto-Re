@@ -21,7 +21,7 @@ export default function Inicio() {
     setCargador(true)
     setTimeout(() => {
       setCargador(false)
-    }, 2550);
+    }, 1350);
   }, [])
 
   const [products, setProducts] = useState([]);

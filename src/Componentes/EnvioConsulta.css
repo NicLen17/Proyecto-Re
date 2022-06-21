@@ -68,6 +68,8 @@
 
 .Redes-consultas:hover {
     transform: scale(1.1);
+    -webkit-box-shadow: 0px 8px 15px 10px #fe8a39 ;
+    box-shadow: 0px 1px 9px 2px #fe8a39 ;
 }
 
 @media only screen and (max-width: 420px) {
@@ -82,7 +84,7 @@
     margin: auto !important;
     font-size: 25px;
     margin-bottom: 25px !important;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fe8a39;
 }
 
 @media (max-width: 975px) {

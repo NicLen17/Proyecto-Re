@@ -175,7 +175,7 @@ export default function Register({ setToken }) {
                                 </Row>
                                 <Row>
                                     <Link className="mx-auto mt-2" to="/login">
-                                        ¿Ya tiene una cuenta? Iniciar sesión
+                                        ¿Ya tiene una cuenta?   Iniciar sesión
                                     </Link>
                                 </Row>
                             </Form>

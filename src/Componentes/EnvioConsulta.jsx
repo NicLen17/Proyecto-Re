@@ -112,9 +112,9 @@ export default function EnvioConsulta() {
                                     </select>
                                 </Form.Group>
                                 <Form.Label className="Form-titulos">Consulta</Form.Label>
-                                <Form.Control className="Input-contacto" minLength="20" maxLength="300" style={{ maxHeight: "200px" }} as="textarea" placeholder="Consulta sobre el producto (stock, color, tamaño, etc)" required rows={3} name="mensaje" onChange={(e) => handleChange(e)} />
+                                <Form.Control className="Input-contacto" minLength="15" maxLength="300" style={{ maxHeight: "200px" }} as="textarea" placeholder="Consulta sobre el producto (stock, color, tamaño, etc)" required rows={3} name="mensaje" onChange={(e) => handleChange(e)} />
                                 <Form.Control.Feedback type="invalid">
-                                    Se requiere mensaje y un minimo de 20 caracteres!
+                                    Se requiere mensaje y un minimo de 15 caracteres!
                                 </Form.Control.Feedback>
                                 <Form.Control.Feedback>Recibido</Form.Control.Feedback>
                             </Form.Group>
@@ -126,7 +126,7 @@ export default function EnvioConsulta() {
                                 <a href="https://www.instagram.com/zeta.ross.3d/"><img className='Redes-consultas' src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
                                 <a href="https://api.whatsapp.com/send?phone=543816072290"><img className='Redes-consultas' src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a>
                             </section>
-                            <p style={{fontSize: "15px", color: "white", textAlign: "center"}}>Seras contactado segun los datos completados</p>
+                            <p style={{fontSize: "15px", color: "white", textAlign: "center"}}>-Seras contactado segun los datos completados-</p>
                         </Form>
                     </div>
                 </div>

@@ -106,7 +106,7 @@ export default function Contacto() {
             </Form>
           </div>
           <div data-Aos="fade-left" className="Otros-contactos">
-            <img className="Logo-contacto" src={Logo} alt="" />
+            <img className="Logo-contacto mt-1" src={Logo} alt="" />
             <div className="Titulo-otrasR">
               <h2 >
                 Tambien puedes contactarme por mis redes sociales!

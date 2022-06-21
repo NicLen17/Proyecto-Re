@@ -28,7 +28,9 @@
 }
 
 .Form-editar {
-    background: linear-gradient(-45deg, #f1683e, #3b0132, #000000, #230642);
+    background: linear-gradient(-45deg, #3b0132, #000000, #230642);
+    border: 1px solid white;
+    border-radius: 3px;
 }
 
 .Titulo-editar {
@@ -36,7 +38,9 @@
 }
 
 .Header-edit {
-    background: linear-gradient(-45deg, #f1683e, #3b0132, #000000, #230642);
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 3px;
 }
 
 .Editar-boton {

@@ -75,7 +75,7 @@ export default function Login({ setUser, setToken }) {
         </Button>
         <Row>
           <Link className="mx-auto mt-2" to="/register">
-            ¿No tienes una cuenta? Registrate!
+            ¿No tienes una cuenta?   Registrate!
           </Link>
         </Row>
       </Form>
