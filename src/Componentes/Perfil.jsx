@@ -24,7 +24,7 @@ export default function Profile({ user }) {
             <div data-aos="fade-up" className="Perfil-cont">
                 <div>
                     <div className="Perfil-img-cont">
-                        <img className="Perfil-img" src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/foto-de-perfil-para-instagram-1024x538.png" alt="profile" />
+                        <img loading='lazy' className="Perfil-img" src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/foto-de-perfil-para-instagram-1024x538.png" alt="profile" />
                     </div>
                 </div>
                 <div className='Perfil-info'>

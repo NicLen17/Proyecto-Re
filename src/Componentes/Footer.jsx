@@ -19,9 +19,9 @@ export default function Footer() {
                         <a className="mt-2 items-footer" href="/login">Login</a>
                     </p>
                     <div className="footer-icons">
-                        <a href="https://www.facebook.com/amir.nazar.5"><img className='Redes-footer' src="https://icongr.am/fontawesome/facebook-official.svg?size=128&color=355bd0" alt="" /></a>
-                        <a href="https://www.instagram.com/zeta.ross.3d/"><img className='Redes-footer' src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
-                        <a href="https://api.whatsapp.com/send?phone=543816072290"><img className='Redes-footer' src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a> 
+                        <a href="https://www.facebook.com/amir.nazar.5"><img loading='lazy' className='Redes-footer' src="https://icongr.am/fontawesome/facebook-official.svg?size=128&color=355bd0" alt="" /></a>
+                        <a href="https://www.instagram.com/zeta.ross.3d/"><img loading='lazy' className='Redes-footer' src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
+                        <a href="https://api.whatsapp.com/send?phone=543816072290"><img loading='lazy' className='Redes-footer' src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a> 
                     </div>
                 </div>
                 <div className="footer-right">

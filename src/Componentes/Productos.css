@@ -123,7 +123,7 @@
     width: 270px;
     height: 400px;
     min-height: 100%;
-    background: linear-gradient(-45deg, #00000052, #3b0132) !important ;
+    background: linear-gradient(-45deg, #3b0132, #000000, #230642);
     transition: 0.2s;
     border: 1px solid #f1683e !important;
     color: rgb(255, 255, 255) !important;

@@ -23,7 +23,7 @@ export default function CategoriaDecoracion() {
   return (
     <div className="Cards-productos">
       {products.map((prod) => {
-        return (prod.categoria === "DECORACION" && (
+        return (prod.categoria === "Decoracion" && (
           <NavLink
             key={prod._id}
             style={{ textDecorationLine: "none" }}
@@ -35,14 +35,14 @@ export default function CategoriaDecoracion() {
               <Card className="CardP-style">
                 <Card.Body>
                   <div className="Cardp-imgcont">
-                    <img style={{ objectFit: "cover" }} className="Cardp-img" src={prod.img[0]} alt="" />
+                    <img loading="lazy" style={{ objectFit: "cover" }} className="Cardp-img" src={prod.img} alt="" />
                   </div>
                   <b st><Card.Title>{prod.nombre}</Card.Title></b>
                   <Card.Text className="module line-clamp">
                     {prod.descripcion}
                   </Card.Text>
                   <Card.Text className="module line-clamp">
-                    <b>${prod.price}</b>
+                    <b style={{ color: "#fe8a39" }}>${prod.price}</b>
                   </Card.Text>
                 </Card.Body>
               </Card>
