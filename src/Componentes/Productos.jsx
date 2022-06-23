@@ -77,7 +77,6 @@ export default function Productos() {
                     </NavLink>)
                 })}
               </div>
-
           }
         </div>
       </div>

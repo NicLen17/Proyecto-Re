@@ -36,7 +36,7 @@ export default function ProdIndividual() {
           <p style={{ fontSize: "15px", maxInlineSize: "415px", marginTop: "20px", textJustify: "initial" }}>
             {product.descripcion}
           </p>
-          <NavLink to='/consultas' as={NavLink}><Button className="Botones-precio" variant="btncompra"> Realizar consulta</Button></NavLink>
+          <NavLink to={`/consultas/${product._id}`} as={NavLink}><Button className="Botones-precio" variant="btncompra"> Realizar consulta</Button></NavLink>
         </div>
       </div>
       <NavLink to='/productos' as={NavLink}><img className="Boton-volver" src="https://icongr.am/fontawesome/arrow-circle-left.svg?size=50&color=000000" alt="atras" /></NavLink>

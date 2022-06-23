@@ -89,7 +89,7 @@ export default function App() {
 
             <Route path='/contacto' element={<Contacto />} />
 
-            <Route path='/consultas' element={<EnvioConsulta />} />
+            <Route path='/consultas/:id' element={<EnvioConsulta />} />
 
             <Route path='/carrito' element={<Carrito />} />
 

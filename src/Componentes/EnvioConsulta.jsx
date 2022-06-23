@@ -5,22 +5,34 @@ import Aos from 'aos'
 import "aos/dist/aos.css"
 import axios from "axios";
 import ScrollToTop from './ScrollToTop'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function EnvioConsulta() {
     const [validated, setValidated] = useState(false);
     const [input, setInput] = useState({});
     const [alert, setAlert] = useState("");
     const [alertSuccess, setalertSuccess] = useState("")
+    const { id } = useParams();
+    const [product, setProduct] = useState({});
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
+
+        const producto = async () => {
+            const { data } = await axios.get(`/productos/${id}`);
+            setProduct(data);
+        }
+        producto()
+    }, [id])
+
+
+    useEffect(() => {
         const productos = async () => {
-            const { data } = await axios.get("/productos");
-            setProducts(data);
+          const { data } = await axios.get("/productos");
+          setProducts(data);
         };
         productos()
-    }, []);
+      }, []);
 
     useEffect(() => {
         Aos.init({ duration: 600 });
@@ -101,14 +113,10 @@ export default function EnvioConsulta() {
                                     style={{ marginTop: "15px" }}
                                     controlId="exampleForm.ControlInput1"
                                 >
-                                    <Form.Label className="Form-titulos">Producto a consultar: </Form.Label>
-                                    <select className="Select-consulta" required name="producto" onChange={(e) => handleChange(e)}aria-label="Default select example">
-                                        <option defaultValue>Seleciona un producto</option>
-                                        {products.map((prod) => {
-                                            return (
-                                                <option>{prod.nombre}</option>
-                                            )
-                                        })}
+                                    
+                                    <select className="Select-consulta" required name="producto" onChange={(e) => handleChange(e)} aria-label="Default select example">
+                                        <option defaultValue> Seleccione el producto </option>
+                                                <option>{product.nombre}</option>
                                     </select>
                                 </Form.Group>
                                 <Form.Label className="Form-titulos">Consulta</Form.Label>
@@ -126,7 +134,7 @@ export default function EnvioConsulta() {
                                 <a href="https://www.instagram.com/zeta.ross.3d/"><img className='Redes-consultas' src="https://icongr.am/fontawesome/instagram.svg?size=128&color=ff24f8" alt="" /></a>
                                 <a href="https://api.whatsapp.com/send?phone=543816072290"><img className='Redes-consultas' src="https://icongr.am/fontawesome/whatsapp.svg?size=30&color=1dcd3b" alt="" /></a>
                             </section>
-                            <p style={{fontSize: "15px", color: "white", textAlign: "center"}}>-Seras contactado segun los datos completados-</p>
+                            <p style={{ fontSize: "15px", color: "white", textAlign: "center" }}>-Seras contactado segun los datos completados-</p>
                         </Form>
                     </div>
                 </div>
